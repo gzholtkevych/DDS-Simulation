@@ -50,10 +50,10 @@ m2=1..nNodes</panel_attributes>
 /nDataUnits: Integer
 --
 *inv:*
-   Simulation.allInstances()-&gt;size() == 1
-   nNodes == Node.allInstances()-&gt;size()
+   Simulation.allInstances()-&gt;size() = 1
+   nNodes = Node.allInstances()-&gt;size()
    nNodes &gt;= 2
-   nDataUnits == DataUnit.allInstances()-&gt;size()</panel_attributes>
+   nDataUnits = DataUnit.allInstances()-&gt;size()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
