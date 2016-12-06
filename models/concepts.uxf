@@ -50,17 +50,10 @@ m2=1..nNodes</panel_attributes>
 /nDataUnits: Integer
 --
 *inv:*
-<<<<<<< HEAD
-   Simulation.allInstances()-&gt;size() = 1
-   nNodes = Node.allInstances()-&gt;size()
-   nNodes &gt;= 2
-   nDataUnits = DataUnit.allInstances()-&gt;size()</panel_attributes>
-=======
    Simulation.allInstances()-&gt;size() == 1
    nNodes == Node.allInstances()-&gt;size()
    nNodes &gt;= 1
    nDataUnits == DataUnit.allInstances()-&gt;size()</panel_attributes>
->>>>>>> adf5439f08d3114398e937aef6d2ef4d12d9daf7
     <additional_attributes/>
   </element>
   <element>
@@ -106,7 +99,7 @@ m2=1..nNodes</panel_attributes>
       <h>270</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1..(nNode-1)
+m1=0..(nNode-1)
 m2=2
 connects v</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
@@ -163,7 +156,8 @@ m2=nNodes</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
-r2=links</panel_attributes>
+r2=links
+m2=*</panel_attributes>
     <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
 </diagram>
