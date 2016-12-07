@@ -24,6 +24,6 @@ with CAP-theorem.
 3. papers/ is the folder containing tex-files of papers written during
 the project
 
-4. sources/ is the folder containing sources of python modules implementing
+4. dds_simulation/ is the folder containing sources of python modules implementing
 the DDS-simulator and other needed python files 
 

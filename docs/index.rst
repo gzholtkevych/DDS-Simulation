@@ -64,9 +64,12 @@ In some definition DDS is a set of servers that are communicating
 between each other by links (by read/write messages). Another their purpose,
 not less important than, is listening to read/write requests from DDS users.
 Thus, the nodes need to be activated somehow.
+But this is just a simulation, so the node does not need to be a thread, then
+some system to start nodes need to be activated. This will be
+powered by variety of algorithms for broadcasting in distributed system like
+gossip etc.
 
-
-Each node will be a server that listen to messages from other nodes.
+Each node will be a fake server that listen to messages from other nodes.
 (user requests is considered here as message also, because there is no
 difference where the requests came from, either it would be the neighbor-node
 or a DDS user itself). Actually, for now, for simplicity, some random node can
@@ -77,8 +80,8 @@ be a user-creator itself. So the server should process:
 - PATCH request - attempt to modify a dataunit.
 - DELETE request - attempt to delete a dataunit.
 
-
 - GET request - attempt to get the info about a dataunit.
+
 
 As you can see, in general, raising the level of abstraction, there are
 actually two types of requests:
