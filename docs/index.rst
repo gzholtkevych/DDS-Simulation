@@ -1,21 +1,20 @@
 Problem description
-======
+===================
+
 
 The goal of the project: to develop the simulation framework for study
-processes in DDS_ and establish quantitative laws related
-with CAP-theorem.
+processes in DDS and establish quantitative laws related to CAP-theorem.
 
-.. _DDS - distributed data stores
+DDS: distributed data stores
 
 
 Entities
-======
+========
 
 - Nodes are servers in DDS topology (1..n)
 - Link is the binding for two nodes in the DDS topology (0..m)
 - Dataunit is the node component, which is stored there
-- Replica is the copy of dataunit that is broadcasted through the DDS
-to nodes that have this dataunit and need a new replica
+- Replica is the copy of dataunit that is broadcasted through the DDS to nodes that have this dataunit and need a new replica.
 
 
 The minimal number of nodes is 1, when DDS consists of just one server.
@@ -23,13 +22,13 @@ In this case the number of links will be 0.
 
 
 Needed services
-======
+===============
 
 Services will provide all necessary behaviour for DDS projects
 
 
 Graph service
-----
+-------------
 
 This will be a set of modules that enhance the DDS simulation process.
 It will help to model experiments on DDS to ensure the proper work of
@@ -59,7 +58,7 @@ Graph modeling should help to measure and realize the consistency
 
 
 Node service
-----
+------------
 
 In some definition DDS is a set of servers that are communicating
 between each other by links (by read/write messages). Another their purpose,
@@ -107,18 +106,16 @@ The node-link topology will be again taken from config files.
 
 
 Calculation metrics service
-------
+---------------------------
 
 Above all of this behaviour there should be the process that is calculating:
 
 - the time till all of dataunits are consistent after change
-- the number of nodes having up-to-date information after a time moment t
-(specified somehow)
+- the number of nodes having up-to-date information after a time moment t (specified somehow)
 - the distribution of broadcast time that is considered in each of experiments
-- the distribution of node frequency (on how many nodes the same dataunit is
-stored)
+- the distribution of node frequency (on how many nodes the same dataunit is stored)
 
-Future:
+Future possible metrics:
 
 - the alive time of the node
 - the alive time of the link
