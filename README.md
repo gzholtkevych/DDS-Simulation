@@ -20,6 +20,7 @@ with CAP-theorem.
 
 2. models/ is the folder containing model files
    * concepts.uxf contains the conceptual model of the simulation
+   * concepts.pdf contains the conceptual model in pdf-format
 
 3. papers/ is the folder containing tex-files of papers written during
 the project
