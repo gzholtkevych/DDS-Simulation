@@ -1,0 +1,4 @@
+
+
+class Link(object):
+    pass
