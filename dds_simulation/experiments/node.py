@@ -1,5 +1,13 @@
+from dds_simulation.experiments.dataunit import Dataunit
 
 class Node(object):
+
+    def __init__(self, identity, neighbors):
+        self.identity = identity
+        self.neighbors = neighbors
+
+    def add_dataunits(self, dataunits):
+        self.dataunits = [Dataunit(i) for i in range(dataunits)]
 
     def run(self):
         """
