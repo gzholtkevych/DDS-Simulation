@@ -11,5 +11,5 @@ if __name__ == '__main__':
     distribution = default.parameter('topology', 'distribution')
 
     dds_service = simulation.DDS(graph)
-    #dds_service.send_message()
+    dds_service.simulate_message()
 

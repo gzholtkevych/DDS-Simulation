@@ -70,8 +70,9 @@ Node service
 ------------
 
 In some definition DDS is a set of servers that are communicating
-between each other by links (by read/write messages). Another their purpose,
-not less important than, is listening to read/write requests from DDS users.
+between each other through links (by read/write messages). Another their
+purpose, not less important than, is listening to read/write requests from DDS
+users.
 Thus, the nodes need to be activated somehow.
 But this is just a simulation, so the node does not need to be a thread, then
 some system to start nodes need to be activated. This will be
@@ -116,6 +117,13 @@ the DDS.
 
 The node-link topology will be again taken from config files.
 
+Now let us clearify what is a fake server (node).
+When system (simulation) sends message to node, it should process it
+and broadcast to others in parallel.
+So the number of workers (for now they can be simple threads or processes,
+later on if needed to avoid GIL in threading or performance overhead in
+multiprocessing the technology called asyncio or greenlet can be used).
+
 
 Calculation metrics service
 ---------------------------
@@ -135,4 +143,4 @@ Future possible metrics:
 - occupance for all links (how many links in DDS ae busy at time moment t).
 
 
-All calculated metrics may be saved to the database and later be shown at my own site.
+All calculated metrics may be saved to the database and later be shown at ssite.
