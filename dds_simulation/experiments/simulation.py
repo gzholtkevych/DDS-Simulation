@@ -1,5 +1,4 @@
 import random
-from eventlet import GreenPool
 
 from dds_simulation.experiments.node import Node
 from dds_simulation.experiments.link import Link

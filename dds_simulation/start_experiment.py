@@ -12,4 +12,5 @@ if __name__ == '__main__':
 
     dds_service = simulation.DDS(graph)
     dds_service.simulate_message()
+    # send data to graph
 
