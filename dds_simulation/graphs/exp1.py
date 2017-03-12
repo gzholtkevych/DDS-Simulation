@@ -11,7 +11,6 @@ class GraphDrawer(object) :
     graph_position = None
 
     def __init__(self, graph, position):
-        self.fig = plt.figure()
         self.graph = graph
         self.graph_position = position
         for i in range(0, graph.number_of_nodes()):
@@ -45,7 +44,6 @@ class GraphDrawer(object) :
         self.redraw_graph(node_list_failed, edge_list_failed)
 
     def animate(self, i):
-
         self.redraw_graph(5)
 
     def draw_graph(self):

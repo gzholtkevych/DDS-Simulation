@@ -9,12 +9,12 @@ class Node(object):
         self.neighbors = neighbors
 
     def add_dataunits(self, dataunits):
-        self.dataunits = [Dataunit(i) for i in dataunits]
-        self.dataunits_ids = dataunits
+        self.dataunits = dataunits
+        self.dataunits_ids = [dataunit.id for dataunit in dataunits]
 
     def patch(self, data):
         """Updates dataunit and send to others."""
-        if data.get('id') in self.dataunits_ids:
+        if data.get('id') in self.dataunits:
             return 1
         return 0
 

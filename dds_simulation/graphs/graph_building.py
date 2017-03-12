@@ -1,7 +1,8 @@
-import random
+import multiprocessing
+from multiprocessing import Queue
 
 from matplotlib import pyplot as plt
-from matplotlib import animation
+from matplotlib.animation import FuncAnimation
 import networkx as nx
 
 
@@ -9,29 +10,25 @@ def form_graph(nodes_number, degree=5):
     return nx.random_regular_graph(degree, nodes_number)
 
 
-class Animator(object):
+class Animation(object):
     """Animates graph"""
 
     labels = {}
 
-    def __init__(self, graph, position):
-        self.fig = plt.figure()
+    def __init__(self, queue, graph, position):
+        self.queue = queue
         self.graph = graph
         self.graph_position = position
         for node in graph.nodes():
             self.labels[node] = node
 
+        self.nodes = self.graph.nodes()
+        self.edges = self.graph.edges()
+
     def initiate(self):
-        self.draw_graph()
-
-    def animate(self, i):
-        node = random.randint(0, self.graph.number_of_nodes()-1)
-        self.redraw_graph(node)
-
-    def draw_graph(self):
         nx.draw_networkx_nodes(self.graph, self.graph_position,
                                nodelist=self.graph.nodes(),
-                               node_color='g',
+                               node_color='r',
                                node_size=500,
                                alpha=0.8)
 
@@ -41,32 +38,34 @@ class Animator(object):
         nx.draw_networkx_labels(self.graph, self.graph_position, self.labels,
                                 font_size=16)
 
-    def redraw_graph(self, highlighted_node):
+    def redraw_graph(self, i):
+        if not self.queue.empty():
+            changed_nodes = self.queue.get_nowait()
+        else:
+            changed_nodes = self.graph.nodes()
+
         nx.draw_networkx_nodes(self.graph, self.graph_position,
-                               nodelist=[highlighted_node],
+                               nodelist=self.graph.nodes(),
+                               node_size=500,
+                               alpha=0.8)
+        nx.draw_networkx_nodes(self.graph, self.graph_position,
+                               nodelist=changed_nodes,
                                node_color='g',
                                node_size=500,
                                alpha=0.8)
-        others = self.graph.nodes().copy()
-        others.remove(highlighted_node)
-        nx.draw_networkx_nodes(self.graph, self.graph_position,
-                               nodelist=others,
-                               node_size=500,
-                               alpha=0.8)
-
-        highlighted_edges = self.graph.edges(highlighted_node)
-
         nx.draw_networkx_edges(self.graph, self.graph_position,
-                               edgelist=highlighted_edges,
+                               edgelist=self.graph.edges(),
                                edge_color='g',
                                alpha=0.5)
 
-    def draw_animation(self):
-        ani = animation.FuncAnimation(self.fig, self.animate,
-                                      init_func=self.initiate,
-                                      interval=1000)
-        plt.show()
 
-g = nx.random_regular_graph(3, 8)
-animator = Animator(g, nx.circular_layout(g))
-animator.draw_animation()
+def plot_graph(animation):
+    fig = plt.figure()
+
+    ani = FuncAnimation(fig, animation.redraw_graph,
+                        init_func=animation.initiate,
+                        interval=200)
+    plt.show()
+    print(multiprocessing.current_process().name,"starting plot show process") #print statement preceded by true process name
+
+    print(multiprocessing.current_process().name,"plotted graph") #print statement preceded by true process name

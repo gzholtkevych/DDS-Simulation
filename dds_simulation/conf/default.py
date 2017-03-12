@@ -1,16 +1,18 @@
-from backports import configparser
+#from backports import configparser
+import configparser
+import os
 
 
-CONFIGFILE = 'conf/datastore.conf'
+CONFIGFILE = os.path.join(os.getcwd(),'conf/datastore.ini')
 CONF = None
 
 
 def getconfig():
-    CONF = configparser.ConfigParser()
-    CONF.read(CONFIGFILE)
+    CONF = configparser.RawConfigParser()
     return CONF
 
 
 def parameter(section, param):
     config = CONF or getconfig()
+    config.read(CONFIGFILE)
     return config.get(section, param)
