@@ -54,22 +54,17 @@ class DDS(object):
         self.controller.message_broadcast([node_identity], [])
 
         nodes_processed = set([node_identity])
-        print("Nodes processed before: ", nodes_processed)
         while len(nodes_processed) < len(self.nodes):
             time_slots_taken += 1
-            print("Iteration 1")
             neighbors = self.nodes[node_identity].neighbors
-            #next_nodes = set(neighbors) - nodes_processed
             # assume now that go to each node takes 1 ts, broadcasting parallel
             time_slots_taken += 1
 
             # assume that each node is updating itself also for 1 ts
             time_slots_taken += 1
             nodes_processed.update(set(neighbors))
-            print("Nodes processed now: ", nodes_processed)
             self.controller.message_broadcast(list(nodes_processed), [])
             node_identity = random.randint(0, len(neighbors))
-
 
         return time_slots_taken
 
