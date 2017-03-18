@@ -1,0 +1,62 @@
+%\emph{\emph{•}}
+\documentclass{llncs}
+%
+\usepackage{amsmath}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\newcommand{\keyterms}[1]{\par{\bfseries{ Key Terms: }}#1}
+
+\begin{document}
+\title{Distributed Datastores: Consistency Metric for Distributed Datastores}
+\author{Kyrylo Rukkas\and Galyna Zholtkevych}
+\institute{V.N.~Karazin Kharkiv National University\\
+	4, Svobody Sqr., 61022, Kharkiv, Ukraine\\
+	\email{galynazholtkevych1991@gmail.com}}
+\maketitle
+\begin{abstract}
+Distributed databases being evolved require write requests to be handled independently to increase availability.
+This means that nodes in a database can process modifying operation. This involves huge conflicts and leads to
+full inconsistency and mess between replicas. This paper investigates a trade-off between availability and consistency
+in a distributed database.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+In evolving distributed systems it is hard and important to keep replicas up-to-date.
+
+\section{Evolving consistency metric}
+The consistency question poses the following questions:
+\begin{itemize}
+\item Conflicts between replicas. This problem is raised and partially solved in 
+\cite{bib:c_ts}
+\item Consistency convergence. This depends on many factors including network topology,
+network failures, links bandwidth, bottlenecks in network overall etc.
+\item Broadcast storm problem
+\item Loops when broadcasting data.
+\end{itemize}
+
+\section{What impacts on consistency}\label{sec:consistency}
+How fast consistency will cover all the graph with one message.
+\section{How to avoid broadcast problem}
+\section{How to avoid conflicts with lot of concurrent write requests}
+\section{Experimental part}\label{sec:experiments}
+Investigation what is better for fast consistency convergence:
+group of masters close enough each to other (this almost replaces centralized server)
+or group of masters allocated in far each from other but having close at least one of slaves.
+
+This needs statistic experiment
+
+\section{Conclusion}
+
+\begin{thebibliography}{99}
+
+\bibitem{bib:c_ts}
+Sanjay Kumar Madria: 
+Handling of Mutual Conflicts in Distributed Databases using Timestamps,
+The Computer Journal. Vol. 41, No.\,6 (1998) 
+
+\end{thebibliography}
+
+\end{document}
+

@@ -96,3 +96,8 @@ ENV/
 
 # media
 *.mp4
+
+# paper stuff
+*.pdf
+*.log
+*.gz
