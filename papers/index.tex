@@ -29,18 +29,23 @@ In evolving distributed systems it is hard and important to keep replicas up-to-
 The consistency question poses the following questions:
 \begin{itemize}
 \item Conflicts between replicas. This problem is raised and partially solved in 
-\cite{bib:c_ts}
+\cite{bib:c_ts}, where algorithm with timestamps on replicas is proposed. But merging
+updated replicas, it takes the response time, so consistency convergence descreases.
+In the paper further sections we will investigate faster consistency convergence.
 \item Consistency convergence. This depends on many factors including network topology,
 network failures, links bandwidth, bottlenecks in network overall etc.
-\item Broadcast storm problem
-\item Loops when broadcasting data.
+\item Broadcast storm problem. This is well-known problem and it has the solution in [links]*.
+So we will not focus on this issue.
+\item Loops when broadcasting data. This is what networking algorithms aimed to solve. [links]*
 \end{itemize}
 
-\section{What impacts on consistency}\label{sec:consistency}
+From this list we can focus on the second question, which cover also replicas conflicts question.
+
+% metrics theory
 How fast consistency will cover all the graph with one message.
-\section{How to avoid broadcast problem}
 \section{How to avoid conflicts with lot of concurrent write requests}
 \section{Experimental part}\label{sec:experiments}
+Based on proposed hypothesis we want to check ... .
 Investigation what is better for fast consistency convergence:
 group of masters close enough each to other (this almost replaces centralized server)
 or group of masters allocated in far each from other but having close at least one of slaves.
