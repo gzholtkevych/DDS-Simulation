@@ -6,6 +6,8 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{url}
+\usepackage[usenames]{color}
+
 \newcommand{\keyterms}[1]{\par{\bfseries{ Key Terms: }}#1}
 
 \begin{document}
@@ -23,28 +25,45 @@ in a distributed database.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
-In evolving distributed systems it is hard and important to keep replicas up-to-date.
+Supporting replicas of an evolving distributed system up-to-dates is very important but hard problem.
+Given that the ACID strategy can not be supported for systems of this class \cite[{\color{red} references to the CAP-conjecture})]{?}, we need to provide a set of indicators of main characteristics of the distributed data store to assess the risk of a wrong decision because of the data inconsistency or unavailability.
+In this paper, we focus our study on the problem of estimating data consistency in a distributed data store.
 
-\section{Evolving consistency metric}
-The consistency question poses the following questions:
-\begin{itemize}
-\item Conflicts between replicas. This problem is raised and partially solved in 
-\cite{bib:c_ts}, where algorithm with timestamps on replicas is proposed. But merging
-updated replicas, it takes the response time, so consistency convergence descreases.
+\section{Evolving Consistency Metric}
+{\color{red}
+Perhaps it is suitable to append this section to the previous.%
+}\par\noindent
+Given that in a distributed data store consistency of replicas may only be eventually \cite[{\color{red} you need to refer to the corresponding papers}]{?}, we need the answering the following questions
+\begin{enumerate}
+\item
+How to resolve conflicts between replicas?
+This problem is raised and partially solved in \cite{bib:c_ts}, where algorithm with timestamps on replicas is proposed.
+But merging updated replicas, it takes the response time, so consistency convergence decreases.
 In the paper further sections we will investigate faster consistency convergence.
-\item Consistency convergence. This depends on many factors including network topology,
-network failures, links bandwidth, bottlenecks in network overall etc.
-\item Broadcast storm problem. This is well-known problem and it has the solution in [links]*.
+\item
+Is it always possible to ensure the convergence to the consistency of data and by what means can this be achieved?
+This depends on many factors including network topology,
+network failures, links bandwidth, bottlenecks in network overall etc \cite[{\color{red} links are needed}]{?}.
+\item
+What methods can be used to effectively solve the broadcast storm problem?
+This is well-known problem and it has the solution in \cite[{\color{red} links are needed}]{?}.
 So we will not focus on this issue.
-\item Loops when broadcasting data. This is what networking algorithms aimed to solve. [links]*
-\end{itemize}
+\item How do loops when broadcasting data be eliminated?
+This is what networking algorithms aimed to solve \cite[{\color{red} links are needed}]{?}.
+\end{enumerate}
 
 From this list we can focus on the second question, which cover also replicas conflicts question.
 
 % metrics theory
 How fast consistency will cover all the graph with one message.
-\section{How to avoid conflicts with lot of concurrent write requests}
-\section{Experimental part}\label{sec:experiments}
+
+{\color{red}%
+Maybe you meant:
+How many time is needed to provide consistency in the whole network in response on one write transaction?%
+}
+\section{One Metric to Assess Consistency of Data}
+\section{Simulation Model to Assess Inconsistency Ratio of Data}
+\section{Case Study}\label{sec:experiments}
 Based on proposed hypothesis we want to check ... .
 Investigation what is better for fast consistency convergence:
 group of masters close enough each to other (this almost replaces centralized server)
