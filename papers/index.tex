@@ -26,6 +26,9 @@ in a distributed database.
 In evolving distributed systems it is hard and important to keep replicas up-to-date.
 
 \section{Evolving consistency metric}
+Нужно сделать упор на консистенси и обосновать нужность выведения формулы метрики inconsistency.
+
+
 The consistency question poses the following questions:
 \begin{itemize}
 \item Conflicts between replicas. This problem is raised and partially solved in 
@@ -41,16 +44,51 @@ So we will not focus on this issue.
 
 From this list we can focus on the second question, which cover also replicas conflicts question.
 
-% metrics theory
 How fast consistency will cover all the graph with one message.
-\section{How to avoid conflicts with lot of concurrent write requests}
-\section{Experimental part}\label{sec:experiments}
-Based on proposed hypothesis we want to check ... .
+
+Prove that having random topology the best algorithm to allocate masters and slaves
+in the next manner: each master has those neighbors-slaves that are closest to it comparing
+other master nodes.
+
+\section{Mathematical model of inconsistency metric}
+
+Формула инконсистентности выведенная с помощью математической вероятности.
+Метрика - вероятность обнаружить inconsistency за одно сравнение на удачу взятых реплик.
+
+Получить ее математические следствия.
+Если система консистентна то значение формулы будет равным 0.
+
+\section{Key studying}\label{sec:experiments}
+
+Экспериментальное исследование.
+
 Investigation what is better for fast consistency convergence:
 group of masters close enough each to other (this almost replaces centralized server)
 or group of masters allocated in far each from other but having close at least one of slaves.
 
 This needs statistic experiment
+
+\section{Inconsistency metric in various kinds of algorithms spreading replicas across DDS}
+Все исследования сейчас основываются на предположении абсолютной надежности сети (отсутсвие network partitions) и отсутствие ограничений на пропускную способнсть (капасити линков равное единице).
+
+Вычислить на основе иммитационных экспериментов на графе метрику инконсистентности на разных алгоритмах (эпидемический).
+
+\section{Different topologies}
+- Полносвязный граф
+- Регулярный граф
+- Рандомный граф
+
+- Граф, где писать нужно на определенные узлы (мастера). Проверить идею, насколько она лучше других, когда у каждого мастера есть примерно по одинковому кол-ву соседей - слейвов (Один слейв может быть соседом несколкьих мастеров, это не есть ограничением). Сравнить с вариантом, когда мастера сгруппированы в одном месте (сходится к ситуации централизованного хранилища и не имеет смысла). И с вариантом, когда мастера отдаленно друг от друга, а слейве где попало.
+Внедрить разное капасити (edge weight) для линков.
+
+\section{Future work}
+!!!! Отдельная секция про availability или на дальнейший ресерч -
+
+Алгоритм распространения-очищения реплик. Если даатаюнит часто запрашивается, то реплика его появляется там, где он часто запрашивается. Когда таймаут запроса к нему истечет (он больше не интересен), реплика его удаляется с этого места.
+Исследовать, насколько может повыситься consistency и availability. 
+
+- Внедрить возможность когда показатели надежности падают, network partitions возникают.
+
 
 \section{Conclusion}
 
