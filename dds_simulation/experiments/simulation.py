@@ -1,4 +1,4 @@
-from multiprocessing import Process
+import abc
 import random
 
 from dds_simulation.experiments.node import Node
@@ -7,6 +7,8 @@ from dds_simulation.experiments.dataunit import Dataunit
 
 
 class DDS(object):
+
+    __metaclass__ = abc.ABCMeta
 
     def __init__(self, graph, controller, distribution, dataunits_number):
         self.nodes = []
@@ -23,6 +25,10 @@ class DDS(object):
 
         self.dataunits = DDS.generate_data(dataunits_number)
         self.distribute_data(distribution)
+
+    @abc.abstractmethod
+    def start_experiment(self):
+        """Starting one of experiments"""
 
     @staticmethod
     def generate_data(dataunits):
