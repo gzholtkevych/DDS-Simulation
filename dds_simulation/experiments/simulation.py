@@ -11,7 +11,7 @@ class DDS(object):
     __metaclass__ = abc.ABCMeta
 
     def __init__(self, graph, controller, distribution, dataunits_number):
-        self.nodes = []
+        self.nodes = list()
         self.links = set()
         self.graph = graph
         self.controller = controller

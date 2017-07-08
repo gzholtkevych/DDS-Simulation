@@ -2,8 +2,9 @@
 import configparser
 import os
 
+PROJECT_ROOT = os.path.join(os.getenv('HOME'), 'projects', 'DDS-Simulation')
 
-CONFIGFILE = os.path.join(os.getcwd(),'conf/datastore.ini')
+CONFIGFILE = os.path.join(PROJECT_ROOT, 'etc', 'datastore.ini')
 CONF = None
 
 
