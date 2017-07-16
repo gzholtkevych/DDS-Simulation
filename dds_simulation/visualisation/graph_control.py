@@ -6,8 +6,8 @@ import networkx as nx
 from PyQt5.QtCore import pyqtSignal
 from PyQt5.QtCore import QObject
 
-from dds_simulation.graphs.graph_building import Animation
-from dds_simulation.graphs.graph_building import plot_graph
+from dds_simulation.visualisation.graph_building import Animation
+from dds_simulation.visualisation.graph_building import plot_graph
 
 
 class GraphController(object):
