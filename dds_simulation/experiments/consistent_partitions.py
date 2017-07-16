@@ -52,7 +52,6 @@ class ConsistentExperiment(DDS):
 
          :return degree of DDS inconsistency
         """
-        print("________________________")
         taking_count = len(partition)
         found_consistent_counts = [0 for i in range(0, taking_count)]
         inconsistency = 0
@@ -64,13 +63,8 @@ class ConsistentExperiment(DDS):
         for partition in consistent_partitions:
             for i in range(0, taking_count):
                 random_node = random.randint(0, len(nodes))
-                print("random node {} in partition {} - {}".format(random_node,
-                                                                   partition,
-                                                              random_node in
-                                                              partition))
                 if random_node in partition:
                     found_consistent_counts[i] += 1
-            print("found:", found_consistent_counts)
             if any(x > 1 for x in found_consistent_counts):
                 return inconsistency
 
@@ -89,30 +83,38 @@ class ConsistentExperiment(DDS):
 
         y = []
         x = []
+        inconsistency_array = []
 
-        i = 0
-        j = 0
         for part in partitions:
-            print(part)
+            i = 0
+            print("partition: ", part)
             while i < experiment_number:
+                j = 0
+
                 while j < sub_experiments:
 
-                    x.append(j)
-                    y.append(self.single_iteration(part, nodes))
+                    taking_result = self.single_iteration(part, nodes)
+                    inconsistency_array.append(taking_result)
                     j += 1
-
+                single_probability = sum(inconsistency_array)/j
+                inconsistency_array.clear()
+                x.append(i)
+                y.append(single_probability)
                 i += 1
 
-            # probability of inconsistency:
-            inconsistency_probability = sum(y) / len(y)
-        print("__________________________")
-        print(y)
-        print(x)
-        average = sum(y) / len(y)
-        extrapolation.draw_probability_extrapolation(
-            x, y, part, len(nodes), average)
 
-        return y
+            # probability of inconsistency:
+            average = sum(y) / len(y)
+            print("__________________________")
+            print(y)
+            #print(x)
+            print(average)
+            extrapolation.draw_probability_extrapolation(
+                x, y, part, len(nodes), average)
+            x.clear()
+            y.clear()
+
+        return x, y
 
     def start_experiment(self):
 
@@ -120,6 +122,3 @@ class ConsistentExperiment(DDS):
 
         inconsistency_states = self.multiple_partitions(partitions)
         return inconsistency_states
-
-
-
