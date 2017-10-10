@@ -4,6 +4,8 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
 \usepackage{url}
 \newcommand{\keyterms}[1]{\par{\bfseries{ Key Terms: }}#1}
 
@@ -145,23 +147,61 @@ Then the corresponding inconsistency states (see Example~\ref{ex:partitions}) ha
 The meaning of $I(u)$ is the value of probability to establish the fact of inconsistency by the way of comparison two randomly chosen replicas.
 \end{example}
 Example~\ref{ex:metric} demonstrates that the proposed metric is equal to $0$ for the absolutely consistent data unit (the case 5) and is equal to $1$ for the absolutely inconsistent data unit (the case 1+1+1+1+1).
-%
+
+\section{Consistent partitions experiment}
+This section demonstrates the result of experiment. We implemented a code that allows to test the accuracy of the inconsistency model implemented above. Partitions probability intervals for different partitions are demonstrating that
+the formulae is correct. To be more intuitive we took the same number of nodes and same partitions.
+
+It is obviously that we do not have exact matching, because the experiment is based on number of iterations where two random nodes are taken from a set of nodes and we count them consistent if they are in the same partition.
+It is also obvious that for one consistent partition inconsistency will be equal $0$ and for maximum number of consistent partitions the inconsistency will be equal to $1$.
+
+\begin{figure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-consistent-partition.png}\hfill
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/2-3-consistent-partitions-probability.png}\hfill
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-4-consistent-partitions-probability.png}
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-2-2-consistent-partitions-probability.png}
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-1-3-consistent-partitions-probability.png}
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-1-1-2-consistent-partitions-probability.png}
+\end{subfigure}
+\end{figure}
+
+\newpage
+
+\includegraphics[scale=0.4]{images/1-1-1-1-1-consistent-partitions-probability.png}
+
+\section{Convergence time complexity}
 
 Now we are interested to calculate also the time that can be taken for consistency convergence.
 Let it be the trivial network where all links have capacity 1. Then each edge of graph has weight 1.
 Let's imagine the nodes that are at the largest distance each from other. In the distributed datastore nodes are
-broadcasting each to other in parallel. So the upper boundary of consistency is the worst case - the maximum of
+broadcasting each to other in parallel. So the upper boundary of consistency in the worst case is the maximum of
 shortest paths. It is well-known that this is diameter of the graph:
+
 
 $n_ts = diameter(G)$.
 
+
 Let's imagine now the real topology where the network graph topology is weighted.
 Let the diameter be the path:
+
+
 $P = [e_1....e_n]$, where $e_i$ has own weight.
+
+
 Then time taken for consistency to converge is:
 
 $\sum_1^{n}w_i$ where $w_i$ is the weight of $i$ edge of the path $P$.
-
 
 
 \section{Replica's actuality research}

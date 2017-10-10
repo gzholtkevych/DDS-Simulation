@@ -57,25 +57,21 @@ class ConsistentExperiment(DDS):
         taking_count = 2
         found_inconsistent_counts = [0 for i in
                                      range(0, len(consistent_partitions))]
-        print("cons parts: ", consistent_partitions)
 
-        for partition in consistent_partitions:
-            nodes = deepcopy(nodes_original)
-            random.shuffle(nodes)
-            print("partition: ", partition)
+        #for partition in consistent_partitions:
+        nodes = deepcopy(nodes_original)
+        random.shuffle(nodes)
 
-            taken = set(random.sample(nodes, taking_count))
-            print("====== TAKEN =-====", taken)
-            if not taken.issubset(partition):
-                found_inconsistent_counts[i] += 1
-            i += 1
-        print(found_inconsistent_counts)
-        return found_inconsistent_counts
+        taken = set(random.sample(nodes, taking_count))
+
+        if any(taken.issubset(partition) for partition in consistent_partitions):
+            return 0
+
+        return 1
 
     def multiple_partitions(self, partitions_number):
         experiment_number = int(default.parameter('experiment', 'experiments'))
-        sub_experiments = int(default.parameter('experiment',
-                                                'sub_experiments'))
+
         nodes = [node.identity for node in self.nodes]
 
         partitions_invariants = [i + 1 for i in range(len(nodes))]
@@ -89,24 +85,20 @@ class ConsistentExperiment(DDS):
         inconsistency_array = []
 
         for part in partitions:
-            i = 0
             print("=========================================")
             print("PARTITION: ", part)
 
-            while i < experiment_number:
-                taking_result = self.single_iteration(part, nodes)
-                print(taking_result)
-                single_probability = sum(taking_result) / len(taking_result)
-                print("SINGLE PROBABILITY:", single_probability)
-                inconsistency_array.append(single_probability)
+            for i in range(experiment_number):
+                for j in range(experiment_number):
+                    taking_result = self.single_iteration(part, nodes)
+                    inconsistency_array.append(taking_result)
 
-                print("Y probabilities: ", inconsistency_array)
+
                 probability = sum(inconsistency_array) / len(
                     inconsistency_array)
                 inconsistency_array.clear()
-                x.append(i)
                 y.append(probability)
-                i += 1
+                x.append(i)
 
             print("=========================================")
             print("AVERAGE =================================")
