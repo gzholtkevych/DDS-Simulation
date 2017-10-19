@@ -1,17 +1,9 @@
-from multiprocessing import Pool, Process
-
-import networkx as nx
 
 from dds_simulation.conf import default
-from dds_simulation.graphs import graph_building
-from dds_simulation.graphs import graph_control
+from dds_simulation.visualisation import graph_building
+from dds_simulation.visualisation import graph_control, extrapolation
 from dds_simulation.experiments import simulation
-
-
-def foo(animation):
-    from random import randint
-
-    animation.nodes = [randint(0, 9)]
+from dds_simulation.experiments import consistent_partitions
 
 
 if __name__ == '__main__':
@@ -22,9 +14,8 @@ if __name__ == '__main__':
     dataunits_number = int(default.parameter('dataunit', 'dataunits'))
     distribution = default.parameter('dataunit', 'distribution')
 
-    controller = graph_control.GraphController(graph)
-    dds_service = simulation.DDS(graph, controller, distribution,
-                                 dataunits_number)
-    dds_service.simulate_message()
+    dds_service = consistent_partitions.ConsistentExperiment(
+        graph, None, distribution, dataunits_number)
+    dds_service.start_experiment()
 
 
