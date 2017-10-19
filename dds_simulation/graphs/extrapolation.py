@@ -24,9 +24,10 @@ def draw_probability_extrapolation(x_vector, y_vector, partitions,
     pyplot.figure()
     pyplot.ylim(0, 1)
     pyplot.ylabel('I({}) = {}'.format(partitions, average))
-    pyplot.plot(x_vector, y_vector, color='b', linewidth=2.0)
+    pyplot.plot(x_vector, y_vector, color='b')
 
     path = os.path.join(PROJECT_ROOT, 'results',
                         '{}-consistent-partitions-probability-{}-nodes-{}'.format(
                             partitions, nodes_number, uuid4().hex))
     pyplot.savefig(path)
+

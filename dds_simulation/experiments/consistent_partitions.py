@@ -1,4 +1,5 @@
-from itertools import combinations
+from copy import deepcopy
+from itertools import combinations_with_replacement
 import random
 
 from .simulation import DDS
@@ -7,7 +8,6 @@ from dds_simulation.conf import default
 
 
 class ConsistentExperiment(DDS):
-
     def _form_random_partitions(self):
         partitions_number = int(default.parameter('experiment', 'partitions'))
         consistent_partitions = []
@@ -43,71 +43,68 @@ class ConsistentExperiment(DDS):
             consistent_partitions.append(nodes)
         return consistent_partitions
 
-    def single_iteration(self, partition, nodes):
+    def single_iteration(self, partition, nodes_original):
         """
          Experimental method
-        
+
          Calculate the inconsistency state by calculating number of compare
          operations to find two consistent nodes.
 
          :return degree of DDS inconsistency
         """
-        taking_count = len(partition)
-        found_consistent_counts = [0 for i in range(0, taking_count)]
-        inconsistency = 0
+        i = 0
+        consistent_partitions = self._form_partitions(partition)
+        taking_count = 2
+        found_inconsistent_counts = [0 for i in
+                                     range(0, len(consistent_partitions))]
 
+        #for partition in consistent_partitions:
+        nodes = deepcopy(nodes_original)
         random.shuffle(nodes)
 
-        count = 0
-        consistent_partitions = self._form_partitions(partition)
-        for partition in consistent_partitions:
-            for i in range(0, taking_count):
-                random_node = random.randint(0, len(nodes))
-                if random_node in partition:
-                    found_consistent_counts[i] += 1
-            if any(x > 1 for x in found_consistent_counts):
-                return inconsistency
+        taken = set(random.sample(nodes, taking_count))
 
-            count += 1
+        if any(taken.issubset(partition) for partition in consistent_partitions):
+            return 0
 
-        inconsistency = 1
-        return inconsistency
+        return 1
 
     def multiple_partitions(self, partitions_number):
         experiment_number = int(default.parameter('experiment', 'experiments'))
-        sub_experiments = int(default.parameter('experiment',
-                                               'sub_experiments'))
+
         nodes = [node.identity for node in self.nodes]
-        partitions = filter(lambda partition: sum(partition) == len(nodes),
-                   combinations(nodes, partitions_number))
+
+        partitions_invariants = [i + 1 for i in range(len(nodes))]
+        partitions = list(
+            filter(lambda partition: sum(partition) == len(nodes),
+                   combinations_with_replacement(
+                       partitions_invariants, partitions_number)))
 
         y = []
         x = []
         inconsistency_array = []
 
         for part in partitions:
-            i = 0
-            print("partition: ", part)
-            while i < experiment_number:
-                j = 0
+            print("=========================================")
+            print("PARTITION: ", part)
 
-                while j < sub_experiments:
-
+            for i in range(experiment_number):
+                for j in range(experiment_number):
                     taking_result = self.single_iteration(part, nodes)
                     inconsistency_array.append(taking_result)
-                    j += 1
-                single_probability = sum(inconsistency_array)/j
-                inconsistency_array.clear()
-                x.append(i)
-                y.append(single_probability)
-                i += 1
 
+
+                probability = sum(inconsistency_array) / len(
+                    inconsistency_array)
+                inconsistency_array.clear()
+                y.append(probability)
+                x.append(i)
+
+            print("=========================================")
+            print("AVERAGE =================================")
 
             # probability of inconsistency:
             average = sum(y) / len(y)
-            print("__________________________")
-            print(y)
-            #print(x)
             print(average)
             extrapolation.draw_probability_extrapolation(
                 x, y, part, len(nodes), average)
