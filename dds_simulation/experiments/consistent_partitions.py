@@ -8,6 +8,9 @@ from dds_simulation.conf import default
 
 
 class ConsistentExperiment(DDS):
+    """
+
+    """
     def _form_random_partitions(self):
         partitions_number = int(default.parameter('experiment', 'partitions'))
         consistent_partitions = []
@@ -55,10 +58,6 @@ class ConsistentExperiment(DDS):
         i = 0
         consistent_partitions = self._form_partitions(partition)
         taking_count = 2
-        found_inconsistent_counts = [0 for i in
-                                     range(0, len(consistent_partitions))]
-
-        #for partition in consistent_partitions:
         nodes = deepcopy(nodes_original)
         random.shuffle(nodes)
 

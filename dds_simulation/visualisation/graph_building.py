@@ -1,13 +1,39 @@
 import multiprocessing
-from multiprocessing import Queue
+import random
+from time import time
 
 from matplotlib import pyplot as plt
 from matplotlib.animation import FuncAnimation
 import networkx as nx
 
 
-def form_graph(nodes_number, degree=5):
+def generate_data():
+    nodes = random.randint(5, 20)
+    degree = random.randint(5, 15)
+    if nodes * degree % 2 == 0 and degree < nodes:
+        return nodes, degree
+    return generate_data()
+
+
+def draw_graph(graph, labels, filename):
+    plt.figure()
+    nx.draw(graph, nx.circular_layout(graph))
+    nx.draw_networkx_labels(graph, nx.circular_layout(graph),
+                            labels=labels,
+                            font_size=16)
+
+    plt.savefig(f"{filename}.png")
+
+
+def form_graph(nodes_number, degree):
     return nx.random_regular_graph(degree, nodes_number)
+
+
+def form_gdn(nodes, edges):
+    return nx.gnm_random_graph(nodes, edges)
+
+def form_gnp(nodes, edges):
+    return nx.fast_gnp_random_graph(nodes, edges)
 
 
 class Animation(object):
@@ -18,6 +44,7 @@ class Animation(object):
     def __init__(self, queue, graph, position):
         self.queue = queue
         self.graph = graph
+
         self.graph_position = position
         for node in graph.nodes():
             self.labels[node] = node
@@ -62,9 +89,10 @@ class Animation(object):
 def plot_graph(animation):
     fig = plt.figure()
 
-    ani = FuncAnimation(fig, animation.redraw_graph,
+    ani = FuncAnimation(fig, animation.draw_graph,
                         init_func=animation.initiate,
                         interval=200)
+    filename = f"{time()}-graph.png"
     plt.show()
     print(multiprocessing.current_process().name,"starting plot show process") #print statement preceded by true process name
 

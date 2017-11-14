@@ -1,12 +1,10 @@
 from multiprocessing import Process
 from multiprocessing import Queue
-import random
 
 import networkx as nx
-from PyQt5.QtCore import pyqtSignal
-from PyQt5.QtCore import QObject
 
-from dds_simulation.visualisation.graph_building import Animation
+from dds_simulation.visualisation.extrapolation import draw_function
+from dds_simulation.visualisation.graph_building import Animation, draw_graph
 from dds_simulation.visualisation.graph_building import plot_graph
 
 
@@ -19,10 +17,17 @@ class GraphController(object):
 
     def __init__(self, graph):
 
-        self.queue = Queue()
-        self.queue.put_nowait([5])
+        self.graph = graph
 
-        animation = Animation(self.queue, graph, nx.circular_layout(graph))
+    def animate(self):
+
+        self.queue = Queue()
+        import random
+        random_node = random.randint(1, graph.number_of_nodes())
+        self.queue.put_nowait([random_node,])
+
+        animation = Animation(self.queue, self.graph, nx.circular_layout(
+            self.graph))
         animator = Process(target=plot_graph, name="Graph Animator",
                            args=(animation,))
         animator.start()
@@ -30,3 +35,9 @@ class GraphController(object):
     def message_broadcast(self, nodes, links):
 
         self.queue.put_nowait(nodes)
+
+    def draw_graph(self, graph, labels, filename):
+        draw_graph(graph, labels, filename)
+
+    def draw_graphics(self, *args, **kwargs):
+        draw_function(*args, **kwargs)

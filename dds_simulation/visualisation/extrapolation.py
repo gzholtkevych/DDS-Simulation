@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from uuid import uuid4
 
 from matplotlib import pyplot
@@ -29,4 +30,31 @@ def draw_probability_extrapolation(x_vector, y_vector, partitions,
     path = os.path.join(PROJECT_ROOT, 'results',
                         '{}-consistent-partitions-probability-{}-nodes-{}'.format(
                             partitions, nodes_number, uuid4().hex))
+    pyplot.savefig(path)
+
+
+def draw_function(x_vector, y_vector, x_label, y_label, filename):
+    pyplot.figure()
+
+    pyplot.xlabel(x_label)
+    pyplot.ylabel(y_label)
+    print("X >>> ", x_vector)
+    print("Y >>>> ", y_vector)
+    # 'c'
+    # cyan
+    # 'm'
+    # magenta
+    # 'y'
+    # yellow
+    # 'k'
+    # black
+    # 'w'
+    # white
+    pyplot.plot(x_vector, y_vector, 'o', color='r', linewidth=2.0)
+    x_line = [x_vector[i] for i in range(0, len(x_vector))
+              if x_vector[i] == y_vector[i]]
+    y_line = x_line[:]
+    pyplot.plot(x_line, y_line, color='k', linewidth=2.0)
+    path = os.path.join(PROJECT_ROOT, 'results',
+                        f'{filename}.png')
     pyplot.savefig(path)
