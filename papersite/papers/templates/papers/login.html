@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block "content" %}
+        <div class="modal__inner">
+          <div class="row">
+            <div class="modal__left">
+              <h2>Log In </h2>
+               <form class="modal__form" action="" method="post">
+                 {% csrf_token %}
+                 <label for="" class="form__item">
+                   <span>Mobile Phone"</span>
+                   <input name="email" type="email"
+                          placeholder="Email"
+                          class="control" value="{{ form.email.value|default:"" }}">
+                   {{ form.email.errors }}
+                 </label>
+
+                 <label for="" class="form__item">
+                   <span>Password</span>
+                        <input name="password" type="password" placeholder="OTP Password" value="{{ form.password.value|default:"" }}" class="control">
+                        {{ form.password.errors }}
+                 </label>
+                 <div class="form__control">
+                   <button type="submit" class="btn">Get Code</button>
+                   {{ form.non_field_errors }}
+                 </div>
+               </form>
+            </div>
+          </div>
+        </div>
+{% endblock %}
