@@ -22,8 +22,7 @@
 \begin{abstract}
 Distributed databases being evolved require write requests to be handled independently to increase availability.
 This means that nodes in a database can process modifying operation. This involves huge conflicts and leads to
-full inconsistency and mess between replicas. This paper investigates a trade-off between availability and consistency
-in a distributed database.
+full inconsistency and mess between replicas. This paper investigates the metrics to define consistency state of a datastore and improve it.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -265,7 +264,45 @@ And the final one:
 
 So, we had easily shown on a simple subset, that our inconsistency metric value corresponds to theoretical one.
 
+Below we present the graphics that are showing $I(d)$ in the worst case:
 
+\begin{figure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-max-consistent-partitions.png}\hfill
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-1-1-1-1-max-consistent-partitions.png}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/2-3-max-consistent-partitions.png}\hfill
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-4-max-consistent-partitions.png}
+\end{subfigure}
+\end{figure}
+
+\begin{figure}
+
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-1-3-max-consistent-partitions.png}
+\end{subfigure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-2-2-max-consistent-partitions.png}
+\end{subfigure}
+
+\end{figure}
+
+\begin{figure}
+\begin{subfigure}{0.5\linewidth}
+\centering\includegraphics[scale=0.4]{images/1-1-1-2-max-consistent-partitions.png}
+\end{subfigure}
+\end{figure}
+
+\newpage
 
 Now we present the graphic that demonstrates the verity of that claim we did in previous section about that
 consistency convergence time $T_C$ for graph $G$ will be no greater than diameter of $G$.

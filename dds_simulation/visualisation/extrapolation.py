@@ -21,14 +21,17 @@ def draw_extrapolation(x_vector, y_vector, partitions_number):
 
 
 def draw_probability_extrapolation(x_vector, y_vector, partitions,
-                                   nodes_number, average):
+                                   nodes_number, average, maximum=None):
     pyplot.figure()
     pyplot.ylim(0, 1)
-    pyplot.ylabel('I({}) = {}'.format(partitions, average))
+    label = f'I({partitions}) = {average}'
+    if maximum is not None:
+        label = f'I_max({partitions}) = {maximum}'
+    pyplot.ylabel(label)
     pyplot.plot(x_vector, y_vector, color='b', linewidth=2.0)
 
     path = os.path.join(PROJECT_ROOT, 'results',
-                        '{}-consistent-partitions-probability-{}-nodes-{}'.format(
+                        '{}-max-consistent-partitions-{}-nodes-{}'.format(
                             partitions, nodes_number, uuid4().hex))
     pyplot.savefig(path)
 
@@ -40,16 +43,7 @@ def draw_function(x_vector, y_vector, x_label, y_label, filename):
     pyplot.ylabel(y_label)
     print("X >>> ", x_vector)
     print("Y >>>> ", y_vector)
-    # 'c'
-    # cyan
-    # 'm'
-    # magenta
-    # 'y'
-    # yellow
-    # 'k'
-    # black
-    # 'w'
-    # white
+
     pyplot.plot(x_vector, y_vector, 'o', color='r', linewidth=2.0)
     x_line = [x_vector[i] for i in range(0, len(x_vector))
               if x_vector[i] == y_vector[i]]

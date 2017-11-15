@@ -20,6 +20,13 @@ class DDS(object):
         self.nodes = list()
         self.links = set()
         self.graph = graph
+        self.nodes = []
+        for node_ident in graph.nodes():
+            neighbors = graph.neighbors(node_ident)
+            self.nodes.append(Node(node_ident, neighbors))
+
+        for node1, node2 in graph.edges():
+            self.links.add(Link(node1, node2))
 
     @abc.abstractmethod
     def start_experiment(self):

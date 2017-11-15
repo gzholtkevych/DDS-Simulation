@@ -74,6 +74,7 @@ class ConsistentExperiment(DDS):
         nodes = [node.identity for node in self.nodes]
 
         partitions_invariants = [i + 1 for i in range(len(nodes))]
+        print("part inv>>> ", partitions_invariants)
         partitions = list(
             filter(lambda partition: sum(partition) == len(nodes),
                    combinations_with_replacement(
@@ -82,7 +83,7 @@ class ConsistentExperiment(DDS):
         y = []
         x = []
         inconsistency_array = []
-
+        print("patritions: ", partitions)
         for part in partitions:
             print("=========================================")
             print("PARTITION: ", part)
@@ -95,6 +96,7 @@ class ConsistentExperiment(DDS):
 
                 probability = sum(inconsistency_array) / len(
                     inconsistency_array)
+
                 inconsistency_array.clear()
                 y.append(probability)
                 x.append(i)
@@ -104,16 +106,17 @@ class ConsistentExperiment(DDS):
 
             # probability of inconsistency:
             average = sum(y) / len(y)
+            maximum = max(y)
             print(average)
+            print(maximum)
             extrapolation.draw_probability_extrapolation(
-                x, y, part, len(nodes), average)
+                x, y, part, len(nodes), average, maximum)
             x.clear()
             y.clear()
 
         return x, y
 
     def start_experiment(self):
-
         partitions = int(default.parameter('experiment', 'partitions'))
 
         inconsistency_states = self.multiple_partitions(partitions)
