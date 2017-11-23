@@ -17,11 +17,13 @@ def generate_data():
 
 def draw_graph(graph, labels, filename):
     plt.figure()
-    nx.draw(graph, nx.circular_layout(graph))
+    nx.draw(graph, nx.circular_layout(graph),edgelist=graph.edges(data=True))
     nx.draw_networkx_labels(graph, nx.circular_layout(graph),
                             labels=labels,
                             font_size=16)
-
+    edge_labels = nx.get_edge_attributes(graph, 'weight')
+    nx.draw_networkx_edge_labels(graph, nx.circular_layout(graph),
+                                 edge_labels=edge_labels)
     plt.savefig(f"{filename}.png")
 
 
