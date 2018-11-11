@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>320</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+EntityDAO
+--
+-id: Long
+--
+r(1)...r(i)
+
+customelement=
+// DB Symbol
+drawArc(5,5,26,8,0,180,true) fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,5,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawRectangle(5,9,26,15) lw=0.1 bg=#222222 //Parameters (x, y, width, height)
+drawLine(5,9,5,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawArc(5,10,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,20,26,8,180,180,true)fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>140</x>
+      <y>40</y>
+      <w>1090</w>
+      <h>660</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;execution environment&gt;&gt;
+Databases Cluster(s)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>470</x>
+      <y>340</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>DB Node</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>660</x>
+      <y>250</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>DB Node</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>860</x>
+      <y>340</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>DB Node</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>650</x>
+      <y>470</y>
+      <w>110</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>DB Node</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>540</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+EntityDAO
+--
+-id: Long
+--
+replica(i-5)...
+replica(i+10)
+
+customelement=
+// DB Symbol
+drawArc(5,5,26,8,0,180,true) fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,5,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawRectangle(5,9,26,15) lw=0.1 bg=#222222 //Parameters (x, y, width, height)
+drawLine(5,9,5,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawArc(5,10,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,20,26,8,180,180,true)fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>980</x>
+      <y>310</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+EntityDAO
+--
+-id: Long
+--
+r(i-3)...
+r(N)
+
+customelement=
+// DB Symbol
+drawArc(5,5,26,8,0,180,true) fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,5,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawRectangle(5,9,26,15) lw=0.1 bg=#222222 //Parameters (x, y, width, height)
+drawLine(5,9,5,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawArc(5,10,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,20,26,8,180,180,true)fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>110</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>// Class Element
+
+EntityDAO
+--
+-id: Long
+--
+#Operation(i: int): int
+/+getDataunit()/
+/+updateDataunit()/
+
+customelement=
+// DB Symbol
+drawArc(5,5,26,8,0,180,true) fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,5,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawRectangle(5,9,26,15) lw=0.1 bg=#222222 //Parameters (x, y, width, height)
+drawLine(5,9,5,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawLine(31,9,31,24)fg=black //Parameters (x1, y1, x2, y2) 
+drawArc(5,10,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,15,26,8,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(5,20,26,8,180,180,true)fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>270</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0;150.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>380</y>
+      <w>410</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;390.0;60.0;390.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>380</y>
+      <w>180</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;120.0;160.0;120.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>290</y>
+      <w>30</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
