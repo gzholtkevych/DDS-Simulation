@@ -23,7 +23,7 @@ class GraphController(object):
 
         self.queue = Queue()
         import random
-        random_node = random.randint(1, graph.number_of_nodes())
+        random_node = random.randint(1, self.graph.number_of_nodes())
         self.queue.put_nowait([random_node,])
 
         animation = Animation(self.queue, self.graph, nx.circular_layout(

@@ -1,0 +1,248 @@
+%%
+%% This is file `xampl-thesis.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% vakthesis.dtx  (with options: `xampl-thesis')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from xampl-thesis.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file vakthesis.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+% Існують кілька опцій, які необхідно вказувати як факультативний
+% аргумент команди \documentclass. Наприклад, для докторської
+% дисертації необхідно написати
+% \documentclass[d]{vakthesis}
+
+% Налагодження кодування шрифта, кодування вхідного файла
+% та вибір необхідних мов
+
+\documentclass[14pt]{vakthesis}
+\usepackage{extsizes}
+\usepackage{cmap} % для кодировки шрифтов в pdf
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,ukrainian]{babel}
+
+%\usepackage{libertine}
+%\usepackage[letterspace=-36]{microtype}
+
+% Підключення необхідних пакетів. Наприклад,
+% Пакети AMS для підтримки математики, теорем, спеціальних шрифтів
+% \usepackage{phd-thesis-library}
+\usepackage{packages}
+\allowdisplaybreaks
+
+
+% Налагодження параметрів сторінки (зокрема берегів).
+% Наприклад, за допомогою пакета geometry
+\usepackage{geometry}
+\geometry{hmargin={30mm,15mm},lines=29,vcentering}
+
+% Якщо потрібно працювати лише з деякими розділами
+%\includeonly{xampl-ch1,xampl-bib}
+
+% Інформація про використані пакети тощо.
+% Може знадобитися для відлагодження класу документа
+%\listfiles
+
+
+
+% Титульна сторінка
+\makeatletter
+\def\onesupervisorname{Науковий\
+    керівник}%
+  \def\manysupervisorsname{Наукові\
+    керівники}
+\makeatother 
+
+\makeatletter
+%\def\@maketitle{%
+%  {\scshape
+%   \@ifundefined{@institution@office}{\relax}{\@institution@office\par}
+%   \@institution\par}
+%  \vspace{\stretch{3}}%
+%  {\raggedleft \@ifundefined{@secret}{}{\@secret\hfill}%
+%     На правах\
+%     рукопису \par}%
+%  \vspace{\stretch{2}}%
+%  {\bfseries\expandafter\emphsurname\@author \par}%
+%  \vspace{\stretch{2}}%
+%  {\raggedleft \CYRU\CYRD\CYRK\ \@udc \par}%
+%  \vspace{\stretch{1}}%
+%  {\large\bfseries\scshape \@title \par}%
+%  \vspace{\stretch{2}}%
+%  \@specialitycode\ --- \@specialityname\par
+%  \vspace{\stretch{2}}%
+%  Дисертація\
+%    на\ здобуття\
+%    вченої\
+%    ступені\linebreak[1]%
+%    \degreename\cyra\
+%    \@science\par%?\linebreak[1]%
+%  \vspace{\stretch{2}}%
+%  {\raggedleft
+%   \let\\\@format@person
+%   \ifx\@supervisor\@empty
+%     \hbox{}\hbox{}\hbox{}
+%   \else
+%     \@supervisors@caption\@supervisors\relax
+%   \fi
+%   \par}%
+%  \vspace{\stretch{3}}%
+%  \@town\ --- \@year}
+%\def\@supervisors@caption{%
+%  \ifnum\value{@supervisors@count}>1
+%    \manysupervisorsname:%
+%  \else
+%    \onesupervisorname
+%  \fi}
+%\def\@format@person#1#2{\linebreak[4]%
+%  \textbf{#1}, \linebreak[1]\@@format@person#2,,\@nil
+%  \futurelet\next\@delimit@person}
+%\def\@@format@person#1,#2,#3\@nil{#1%
+%  \if\relax#2\relax\else, \linebreak[0]#2\fi}
+%\def\@delimit@person{\ifx\relax\next\else,\fi}
+%\def\emphsurname#1 #2{\textsc{#1} #2}
+%\makeatother 
+
+% Локальні означення
+%\hyphenpenalty=10000
+\input{commands}
+\input{names}
+
+  
+\begin{document}
+
+%\setdefaultleftmargin{0pt}{}{}{}{}{}
+
+% Назва дисертації
+\title{Математичні імітаційні моделі для забезпечення узгодженості для розподілених сховищ даних}
+% Прізвище, ім'я, по батькові здобувача
+\author{Жолткевич Галина Григоріївна}
+% Прізвище, ім'я, по батькові наукового керівника/консультанта
+\supervisor{Рукас Кирило Маркович}
+% Науковий ступінь, вчене звання наукового керівника/консультанта
+           {доктор технічних наук, доцент}
+% Спеціальність
+%\speciality{01.05.02}
+% Варіант із вказуванням факультативних аргументів
+\speciality[Математичне моделювання та обчислювальні методи]{01.05.02}[технічних наук]
+% Індекс за УДК
+\udc{004.042/519.713.2}
+% Установа, де виконана робота, і місто
+\institution{Міністерство освіти і науки України \linebreak Харківський національний університет імені~В.Н.~Каразіна}{Харків}
+	% Рік, коли написана дисертація
+\date{2019}
+
+% Тут буде титульна сторінка
+\maketitle
+
+% Зміст
+\tableofcontents
+
+\chapter*{Вступ}
+
+\paragraph{\bfseries Актуальність теми.}
+
+В наше сьогодення інноваційні технології з'являються дуже швидко, а існуючі розвиваються з неймовірною швидкістю. Гіперлуп, багаточисленні дослідження космосу, наукові роботи в інших галузях, таких, 
+як медицина, зелені мережі, а також, більш побутові, але все ще такі потрібні технології, такі, як 
+комунікації, транспорт, розумні будинки... Не можна нехтувати тим фактом, що всі ці системи потребують
+більшої гнучкості, швидкості, надійності та засобів для зберігання інформації також надійно та швидко і доступно, а інколи навіть доступність має бути майже у будь-якій точці земної кулі.
+Тому одним з найважливіших компонентів для багатьох таких систем є швидке і надійне розподілене сховище.
+В 21 столітті термін "розподілене сховище" становиться вже звичним. Деякі сховища збільшують кількість вузлів, деякі - ні. Причиною цьому є те, що багато з таких систем потребують сильної узгодженості даних. Але якщо збільшувати кількість вузлів для сховища, консистентність падає дуже швидко. А для деяких систем це важлива частина для їх стабільної роботи.
+
+Бо є дуже відома CAP-теорема, яка стверджує, що неможливо одночасно задовільнити всі три 
+характеристики для сховища, узгодженість (consistency), доступність (availability), 
+стійкість до розділення (partition tolerance).
+
+Ми не збираємося оскаржувати цю теорему, але робимо спробу обійти цю проблему. Механізм для цього і буде темою для цієї роботи.
+
+\paragraph{\bfseries Взаємозв'язок роботи з науковими програмами, планами, темами.}
+Диссертаційна робота виконана згідно з планом \linebreak
+научно-исследовательских работ Харьковского национального университета имени В.Н. Каразина 
+в рамках темы "Математическое и компьютерное моделирование информационных процессов в сложных естественных и технических системах" 
+(номер государственной регистрации 0112U002098).
+
+
+\paragraph{\bfseries Мета і завдання дослідження.}
+Метою роботи являється побудува імітаційних та математичних моделей для механізму
+підтримки сильної узгодженості у розподілених сховищах даних, проведення експериментів, оцінювання складності імітаційних моделей, побудува метрик, за якими можна дослідити складність даних моделей, а також розробка
+обчислювальних методів для сформованого механізму. Це дозволить оцінити, наскільки можна розширити будь-яку розподілену систему і сформує методи для коректної роботи за такими умовами.
+
+Для доягнення цієї мети у роботі розв'язані наступні задачі:
+%\begin{enumerate}[widest=9999,itemindent=*,leftmargin=0pt]
+%\item 
+%Проведен анализ проявившихся в теории и практике программной инженерии тенденций, 
+%состоящих в изменении концепций разработки архитектурных решений больших систем обработки информации. 
+%Это позволило сделать вывод о расширении использования асинхронных архитектурных решений основанных на событийном управлении, 
+%что обосновывает актуальность задачи совершенствования математических моделей, 
+%используемых для статического анализа, спецификации и проектирования систем этого класса.
+%
+%\item 
+%Проведен анализ существующих событийно-управляемых архитектурных стилей с целью выявления их инвариантных свойств, 
+%которые должны отражаться в общей системной модели событийно-управляемой системы обработки информации. 
+%По результатам проведенного анализа построена общая системная модель компонента событийно-управляемой системы обработки информации. 
+%
+%\item 
+%Исследованы свойства потоков сложных событий на предмет возможности распознавания в них заданных множеств сложных событий.
+%
+%\item 
+%Обосновано применение абстрактных предавтоматов для математического моделирования компонентов событийно-управляемых систем обработки информации 
+%путем доказательства двойственности абстрактных предавтоматов и CEP-машин.
+%
+%\item 
+%Рассмотрен вопрос алгоритмической реализуемости CEP-машин. 
+%Выявлены возможные аномалии вычислимости таких машин и предложен метод их устранения.
+%
+%\item 
+%Разработан специальный класс CEP-машин распознающих сложные события описываемые регулярными языками. 
+%А также, на базе технологий машинного обучения, построен метод их синтеза
+%
+%\item 
+%Разработаны прототипы программных утилит статического анализа, 
+%обеспечивающих верификацию программных компонентов событийно-управляемых систем обработки информации, 
+%которые реализуют предложенные и обоснованные в работе вычислительные методы.
+%
+%\item 
+%Проведена проверка прототипов программных утилит статического анализа путем их использования при разработке программного обеспечения.
+%\end{enumerate}
+
+\chapter{Балансування узгодженості}
+
+Наскільки нам відомо, що відповідно до CAP-теореми можна задовільнити тільки будь-які дві з трьох характеристик
+для розподіленого сховища даних.
+В цьому розділі розглядається можливість досягнути компромісу та забезпечити консистентні відповіді 
+від бази даних, не втрачая доступності бази.
+
+Ми розуміємо, що консистентність
+
+ In this chapter we make attempt to reach compromise and ensure or increase consistency value for any distributed datastore without losing availability and partition tolerance.
+We would like to introduce the idea first and then estimate its impact availability and partition tolerance.
+
+So let us go deeper into a problem.
+
+Imagine we have a distributed datastore that has N nodes. We do not take into account for now role of each node
+(master or slave) and assume that each node can accept read and write requests. Now we focus on the mechanism
+of database request accepting and processing. If one of nodes accepted write request, we claim that the
+datastore system will reach fast enough of consistency value to maintain consistent response. 
+
+What if to try to get round this problem by handling request to database by the list of consistent nodes for. appropriate to the dataunit incoming in the request.
+We want to estimate how it may impact availability and partition tolerance if we want to 
+get round consistency issue this way.
+
+There are several solutions. But they all have general architecture:
+(Picture of architecture)
+
+\end{document}

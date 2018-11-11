@@ -1,0 +1,10 @@
+\contentsline {chapter}{\numberline {1}Hypothesis: Distributed Datastore: Handle request consistent}{4}
+\contentsline {chapter}{\numberline {2}Load balancer handling solution and its estimates}{5}
+\contentsline {chapter}{\numberline {3}Hybrid algorithm}{7}
+\contentsline {chapter}{\numberline {4}Own load balancing algorithm estimates}{8}
+\contentsline {chapter}{\numberline {5}Distributed hash table}{9}
+\contentsline {chapter}{\numberline {6}Imitation model to communicate at load balancer level}{10}
+\contentsline {chapter}{\numberline {7}Mathematical Model of ... }{11}
+\contentsline {chapter}{\numberline {8}Estimates, time complexity of algorithm basing on lb balancer, distributed hash table}{12}
+\contentsline {chapter}{\numberline {9}Appendix: Load balancer, distributed hash table complexity estimates}{13}
+\contentsline {likechapter}{\MakeUppercase {Biblography}}{13}
