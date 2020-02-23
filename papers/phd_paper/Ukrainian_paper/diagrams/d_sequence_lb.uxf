@@ -97,7 +97,7 @@ actual replica</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>240</x>
-      <y>430</y>
+      <y>420</y>
       <w>450</w>
       <h>80</h>
     </coordinates>
@@ -112,7 +112,7 @@ decide</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>240</x>
-      <y>520</y>
+      <y>580</y>
       <w>450</w>
       <h>60</h>
     </coordinates>
@@ -138,23 +138,8 @@ according to write request</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>450</y>
-      <w>450</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-come to any node
-that configured 
-load balancing alorithm
-decide</panel_attributes>
-    <additional_attributes>430.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>660</x>
-      <y>570</y>
+      <y>620</y>
       <w>500</w>
       <h>80</h>
     </coordinates>

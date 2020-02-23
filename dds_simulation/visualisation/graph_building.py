@@ -16,7 +16,7 @@ def generate_data():
 
 
 def draw_graph(graph, labels, filename):
-    plt.figure()
+    plt.figure(dpi=1200)
     nx.draw(graph, nx.circular_layout(graph),edgelist=graph.edges(data=True))
     nx.draw_networkx_labels(graph, nx.circular_layout(graph),
                             labels=labels,
@@ -24,7 +24,7 @@ def draw_graph(graph, labels, filename):
     edge_labels = nx.get_edge_attributes(graph, 'weight')
     nx.draw_networkx_edge_labels(graph, nx.circular_layout(graph),
                                  edge_labels=edge_labels)
-    plt.savefig(f"{filename}.png")
+    plt.savefig(f"{filename}.png", dpi=1200)
 
 
 def form_graph(nodes_number, degree):

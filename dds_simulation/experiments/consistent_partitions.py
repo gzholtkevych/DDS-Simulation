@@ -110,7 +110,7 @@ class ConsistentExperiment(DDS):
             print(average)
             print(maximum)
             extrapolation.draw_probability_extrapolation(
-                x, y, part, len(nodes), average, maximum)
+                x, y, part, len(nodes), average)
             x.clear()
             y.clear()
 

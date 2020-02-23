@@ -1,55 +1,53 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.11.20)  23 NOV 2017 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.11.22)  22 JAN 2020 23:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **index.tex
 (./index.tex
-LaTeX2e <2017-04-15>
-Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
+LaTeX2e <2019-10-01> patch level 1
 (./llncs.cls
 Document Class: llncs 2010/07/12 v2.17 
  LaTeX document class for Lecture Notes in Computer Science
 (/usr/share/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2019/08/27 v1.4j Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size10.clo 2019/08/27 v1.4j Standard LaTeX file (size option)
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count87
-\mult@box=\box26
+Package: multicol 2019/03/01 v1.8w multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box27
 \multicol@leftmargin=\dimen103
-\c@unbalance=\count88
-\c@collectmore=\count89
-\doublecol@number=\count90
-\multicoltolerance=\count91
-\multicolpretolerance=\count92
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
 \full@width=\dimen104
 \page@free=\dimen105
 \premulticols=\dimen106
 \postmulticols=\dimen107
 \multicolsep=\skip43
 \multicolbaselineskip=\skip44
-\partial@page=\box27
-\last@line=\box28
+\partial@page=\box28
+\last@line=\box29
 \maxbalancingoverflow=\dimen108
-\mult@rightbox=\box29
-\mult@grightbox=\box30
-\mult@gfirstbox=\box31
-\mult@firstbox=\box32
-\@tempa=\box33
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
 \@tempa=\box34
 \@tempa=\box35
 \@tempa=\box36
@@ -66,20 +64,21 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count93
-\c@finalcolumnbadness=\count94
+\@tempa=\box50
+\c@minrows=\count94
+\c@columnbadness=\count95
+\c@finalcolumnbadness=\count96
 \last@try=\dimen109
 \multicolovershoot=\dimen110
 \multicolundershoot=\dimen111
-\mult@nat@firstbox=\box50
-\colbreak@box=\box51
-\mc@col@check@num=\count95
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+\mc@col@check@num=\count97
 )
-(/usr/share/texmf-dist/tex/latex/oberdiek/aliascnt.sty
-Package: aliascnt 2016/05/16 v1.4 Alias counters (HO)
-
-(/usr/share/texmf-dist/tex/latex/carlisle/remreset.sty))
-\c@chapter=\count96
+(/usr/share/texmf-dist/tex/latex/aliascnt.sty
+Package: aliascnt 2018/09/07 v1.5 Alias counters (HO)
+)
+\c@chapter=\count98
 LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 362.
 LaTeX Font Info:    Redeclaring math symbol \Delta on input line 363.
 LaTeX Font Info:    Redeclaring math symbol \Theta on input line 364.
@@ -101,37 +100,37 @@ LaTeX Font Info:    Redeclaring math symbol \Omega on input line 372.
 \tocparanum=\dimen119
 \tocparatotal=\dimen120
 \tocsubparanum=\dimen121
-\@tempcntc=\count97
+\@tempcntc=\count99
 \fnindent=\dimen122
-\c@@inst=\count98
-\c@@auth=\count99
-\c@auco=\count100
+\c@@inst=\count100
+\c@@auth=\count101
+\c@auco=\count102
 \instindent=\dimen123
-\authrun=\box52
+\authrun=\box53
 \authorrunning=\toks14
 \tocauthor=\toks15
-\titrun=\box53
+\titrun=\box54
 \titlerunning=\toks16
 \toctitle=\toks17
-\c@theorem=\count101
-\c@case=\count102
-\c@conjecture=\count103
-\c@corollary=\count104
-\c@definition=\count105
-\c@example=\count106
-\c@exercise=\count107
-\c@lemma=\count108
-\c@note=\count109
-\c@problem=\count110
-\c@property=\count111
-\c@proposition=\count112
-\c@question=\count113
-\c@solution=\count114
-\c@remark=\count115
+\c@theorem=\count103
+\c@case=\count104
+\c@conjecture=\count105
+\c@corollary=\count106
+\c@definition=\count107
+\c@example=\count108
+\c@exercise=\count109
+\c@lemma=\count110
+\c@note=\count111
+\c@problem=\count112
+\c@property=\count113
+\c@proposition=\count114
+\c@question=\count115
+\c@solution=\count116
+\c@remark=\count117
 \headlineindent=\dimen124
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2019/04/01 v2.17c AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
@@ -150,34 +149,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count116
-LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count117
-\leftroot@=\count118
-LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count119
-\DOTSCASE@=\count120
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box54
-\strutbox@=\box55
+\inf@bad=\count118
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count119
+\leftroot@=\count120
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count121
+\DOTSCASE@=\count122
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box55
+\strutbox@=\box56
 \big@size=\dimen127
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-
-
-Package amsmath Warning: Unable to redefine math accent \vec.
-
-\macc@depth=\count121
-\c@MaxMatrixCols=\count122
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count123
+\c@MaxMatrixCols=\count124
 \dotsspace@=\muskip10
-\c@parentequation=\count123
-\dspbrk@lvl=\count124
+\c@parentequation=\count125
+\dspbrk@lvl=\count126
 \tag@help=\toks19
-\row@=\count125
-\column@=\count126
-\maxfields@=\count127
+\row@=\count127
+\column@=\count128
+\maxfields@=\count129
 \andhelp@=\toks20
 \eqnshift@=\dimen128
 \alignsep@=\dimen129
@@ -189,27 +184,65 @@ Package amsmath Warning: Unable to redefine math accent \vec.
 \multlinegap=\skip46
 \multlinetaggap=\skip47
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
-) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+LaTeX Info: Redefining \[ on input line 2855.
+LaTeX Info: Redefining \] on input line 2856.
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf-dist/tex/latex/extsizes/extsizes.sty
+Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
+
+
+Package ExtSizes Warning: It is better to use one of the extsizes classes,
+ if you can.
+
+(/usr/share/texmf-dist/tex/latex/extsizes/size14.clo
+File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+))
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
 
 (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
 )
+(/usr/share/texmf-dist/tex/latex/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+(/usr/share/texmf-dist/tex/latex/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count130
+\Gm@cntv=\count131
+\c@Gm@tempcnt=\count132
+\Gm@bindingoffset=\dimen134
+\Gm@wd@mp=\dimen135
+\Gm@odd@mp=\dimen136
+\Gm@even@mp=\dimen137
+\Gm@layoutwidth=\dimen138
+\Gm@layoutheight=\dimen139
+\Gm@layouthoffset=\dimen140
+\Gm@layoutvoffset=\dimen141
+\Gm@dimlist=\toks24
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
 (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -217,30 +250,30 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 105.
 
 (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen134
-\Gin@req@width=\dimen135
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
 )
 (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+Package: subcaption 2019/09/01 v1.3a Sub-captions (AR)
 
 (/usr/share/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
 
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen136
-\captionmargin@=\dimen137
-\captionwidth=\dimen138
-\caption@tempdima=\dimen139
-\caption@indent=\dimen140
-\caption@parindent=\dimen141
-\caption@hangindent=\dimen142
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen144
+\captionmargin@=\dimen145
+\captionwidth=\dimen146
+\caption@tempdima=\dimen147
+\caption@indent=\dimen148
+\caption@parindent=\dimen149
+\caption@hangindent=\dimen150
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -253,11 +286,260 @@ Package caption Info: \@makecaption = \long macro:#1#2->\small \vskip \abovecap
 tionskip \sbox \@tempboxa {{\bfseries #1.} #2}\ifdim \wd \@tempboxa >\hsize {\b
 fseries #1.} #2\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
 tempboxa \hfil }\fi \vskip \belowcaptionskip .
-\c@ContinuedFloat=\count128
+\c@caption@flags=\count133
+\c@ContinuedFloat=\count134
 )
-\c@subfigure=\count129
-\c@subtable=\count130
-) (/usr/share/texmf-dist/tex/latex/url/url.sty
+\c@subfigure=\count135
+\c@subtable=\count136
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks25
+\inpenc@posthook=\toks26
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2019/10/15 3.35 The Babel package
+
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2019/10/15 3.35 Babel switching mechanism
+)
+(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2019/10/15 3.35 Babel common definitions
+\babel@savecnt=\count137
+\U@D=\dimen151
+
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count138
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+(/usr/share/texmf-dist/tex/generic/babel-ukrainian/ukraineb.ldf
+Language: ukraineb 2018/04/11 1.4c Ukrainian support for the Babel system
+
+
+Package babel Warning: No Cyrillic font encoding has been loaded so far.
+(babel)                A font encoding should be declared before babel.
+(babel)                Default `T2A' encoding will be loaded  on input line 79.
+
+
+(/usr/share/texmf-dist/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 2005/09/27 v1.0i Cyrillic encoding definition file
+Now handling font encoding T2A ...
+... processing UTF-8 mapping file for font encoding T2A
+
+(/usr/share/texmf-dist/tex/latex/base/t2aenc.dfu
+File: t2aenc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0237 (decimal 567)
+   defining Unicode char U+0400 (decimal 1024)
+   defining Unicode char U+0401 (decimal 1025)
+   defining Unicode char U+0402 (decimal 1026)
+   defining Unicode char U+0403 (decimal 1027)
+   defining Unicode char U+0404 (decimal 1028)
+   defining Unicode char U+0405 (decimal 1029)
+   defining Unicode char U+0406 (decimal 1030)
+   defining Unicode char U+0407 (decimal 1031)
+   defining Unicode char U+0408 (decimal 1032)
+   defining Unicode char U+0409 (decimal 1033)
+   defining Unicode char U+040A (decimal 1034)
+   defining Unicode char U+040B (decimal 1035)
+   defining Unicode char U+040C (decimal 1036)
+   defining Unicode char U+040D (decimal 1037)
+   defining Unicode char U+040E (decimal 1038)
+   defining Unicode char U+040F (decimal 1039)
+   defining Unicode char U+0410 (decimal 1040)
+   defining Unicode char U+0411 (decimal 1041)
+   defining Unicode char U+0412 (decimal 1042)
+   defining Unicode char U+0413 (decimal 1043)
+   defining Unicode char U+0414 (decimal 1044)
+   defining Unicode char U+0415 (decimal 1045)
+   defining Unicode char U+0416 (decimal 1046)
+   defining Unicode char U+0417 (decimal 1047)
+   defining Unicode char U+0418 (decimal 1048)
+   defining Unicode char U+0419 (decimal 1049)
+   defining Unicode char U+041A (decimal 1050)
+   defining Unicode char U+041B (decimal 1051)
+   defining Unicode char U+041C (decimal 1052)
+   defining Unicode char U+041D (decimal 1053)
+   defining Unicode char U+041E (decimal 1054)
+   defining Unicode char U+041F (decimal 1055)
+   defining Unicode char U+0420 (decimal 1056)
+   defining Unicode char U+0421 (decimal 1057)
+   defining Unicode char U+0422 (decimal 1058)
+   defining Unicode char U+0423 (decimal 1059)
+   defining Unicode char U+0424 (decimal 1060)
+   defining Unicode char U+0425 (decimal 1061)
+   defining Unicode char U+0426 (decimal 1062)
+   defining Unicode char U+0427 (decimal 1063)
+   defining Unicode char U+0428 (decimal 1064)
+   defining Unicode char U+0429 (decimal 1065)
+   defining Unicode char U+042A (decimal 1066)
+   defining Unicode char U+042B (decimal 1067)
+   defining Unicode char U+042C (decimal 1068)
+   defining Unicode char U+042D (decimal 1069)
+   defining Unicode char U+042E (decimal 1070)
+   defining Unicode char U+042F (decimal 1071)
+   defining Unicode char U+0430 (decimal 1072)
+   defining Unicode char U+0431 (decimal 1073)
+   defining Unicode char U+0432 (decimal 1074)
+   defining Unicode char U+0433 (decimal 1075)
+   defining Unicode char U+0434 (decimal 1076)
+   defining Unicode char U+0435 (decimal 1077)
+   defining Unicode char U+0436 (decimal 1078)
+   defining Unicode char U+0437 (decimal 1079)
+   defining Unicode char U+0438 (decimal 1080)
+   defining Unicode char U+0439 (decimal 1081)
+   defining Unicode char U+043A (decimal 1082)
+   defining Unicode char U+043B (decimal 1083)
+   defining Unicode char U+043C (decimal 1084)
+   defining Unicode char U+043D (decimal 1085)
+   defining Unicode char U+043E (decimal 1086)
+   defining Unicode char U+043F (decimal 1087)
+   defining Unicode char U+0440 (decimal 1088)
+   defining Unicode char U+0441 (decimal 1089)
+   defining Unicode char U+0442 (decimal 1090)
+   defining Unicode char U+0443 (decimal 1091)
+   defining Unicode char U+0444 (decimal 1092)
+   defining Unicode char U+0445 (decimal 1093)
+   defining Unicode char U+0446 (decimal 1094)
+   defining Unicode char U+0447 (decimal 1095)
+   defining Unicode char U+0448 (decimal 1096)
+   defining Unicode char U+0449 (decimal 1097)
+   defining Unicode char U+044A (decimal 1098)
+   defining Unicode char U+044B (decimal 1099)
+   defining Unicode char U+044C (decimal 1100)
+   defining Unicode char U+044D (decimal 1101)
+   defining Unicode char U+044E (decimal 1102)
+   defining Unicode char U+044F (decimal 1103)
+   defining Unicode char U+0450 (decimal 1104)
+   defining Unicode char U+0451 (decimal 1105)
+   defining Unicode char U+0452 (decimal 1106)
+   defining Unicode char U+0453 (decimal 1107)
+   defining Unicode char U+0454 (decimal 1108)
+   defining Unicode char U+0455 (decimal 1109)
+   defining Unicode char U+0456 (decimal 1110)
+   defining Unicode char U+0457 (decimal 1111)
+   defining Unicode char U+0458 (decimal 1112)
+   defining Unicode char U+0459 (decimal 1113)
+   defining Unicode char U+045A (decimal 1114)
+   defining Unicode char U+045B (decimal 1115)
+   defining Unicode char U+045C (decimal 1116)
+   defining Unicode char U+045D (decimal 1117)
+   defining Unicode char U+045E (decimal 1118)
+   defining Unicode char U+045F (decimal 1119)
+   defining Unicode char U+0490 (decimal 1168)
+   defining Unicode char U+0491 (decimal 1169)
+   defining Unicode char U+0492 (decimal 1170)
+   defining Unicode char U+0493 (decimal 1171)
+   defining Unicode char U+0496 (decimal 1174)
+   defining Unicode char U+0497 (decimal 1175)
+   defining Unicode char U+0498 (decimal 1176)
+   defining Unicode char U+0499 (decimal 1177)
+   defining Unicode char U+049A (decimal 1178)
+   defining Unicode char U+049B (decimal 1179)
+   defining Unicode char U+049C (decimal 1180)
+   defining Unicode char U+049D (decimal 1181)
+   defining Unicode char U+04A0 (decimal 1184)
+   defining Unicode char U+04A1 (decimal 1185)
+   defining Unicode char U+04A2 (decimal 1186)
+   defining Unicode char U+04A3 (decimal 1187)
+   defining Unicode char U+04A4 (decimal 1188)
+   defining Unicode char U+04A5 (decimal 1189)
+   defining Unicode char U+04AA (decimal 1194)
+   defining Unicode char U+04AB (decimal 1195)
+   defining Unicode char U+04AE (decimal 1198)
+   defining Unicode char U+04AF (decimal 1199)
+   defining Unicode char U+04B0 (decimal 1200)
+   defining Unicode char U+04B1 (decimal 1201)
+   defining Unicode char U+04B2 (decimal 1202)
+   defining Unicode char U+04B3 (decimal 1203)
+   defining Unicode char U+04B6 (decimal 1206)
+   defining Unicode char U+04B7 (decimal 1207)
+   defining Unicode char U+04B8 (decimal 1208)
+   defining Unicode char U+04B9 (decimal 1209)
+   defining Unicode char U+04BA (decimal 1210)
+   defining Unicode char U+04BB (decimal 1211)
+   defining Unicode char U+04C0 (decimal 1216)
+   defining Unicode char U+04C1 (decimal 1217)
+   defining Unicode char U+04C2 (decimal 1218)
+   defining Unicode char U+04D0 (decimal 1232)
+   defining Unicode char U+04D1 (decimal 1233)
+   defining Unicode char U+04D2 (decimal 1234)
+   defining Unicode char U+04D3 (decimal 1235)
+   defining Unicode char U+04D4 (decimal 1236)
+   defining Unicode char U+04D5 (decimal 1237)
+   defining Unicode char U+04D6 (decimal 1238)
+   defining Unicode char U+04D7 (decimal 1239)
+   defining Unicode char U+04D8 (decimal 1240)
+   defining Unicode char U+04D9 (decimal 1241)
+   defining Unicode char U+04DA (decimal 1242)
+   defining Unicode char U+04DB (decimal 1243)
+   defining Unicode char U+04DC (decimal 1244)
+   defining Unicode char U+04DD (decimal 1245)
+   defining Unicode char U+04DE (decimal 1246)
+   defining Unicode char U+04DF (decimal 1247)
+   defining Unicode char U+04E2 (decimal 1250)
+   defining Unicode char U+04E3 (decimal 1251)
+   defining Unicode char U+04E4 (decimal 1252)
+   defining Unicode char U+04E5 (decimal 1253)
+   defining Unicode char U+04E6 (decimal 1254)
+   defining Unicode char U+04E7 (decimal 1255)
+   defining Unicode char U+04E8 (decimal 1256)
+   defining Unicode char U+04E9 (decimal 1257)
+   defining Unicode char U+04EC (decimal 1260)
+   defining Unicode char U+04ED (decimal 1261)
+   defining Unicode char U+04EE (decimal 1262)
+   defining Unicode char U+04EF (decimal 1263)
+   defining Unicode char U+04F0 (decimal 1264)
+   defining Unicode char U+04F1 (decimal 1265)
+   defining Unicode char U+04F2 (decimal 1266)
+   defining Unicode char U+04F3 (decimal 1267)
+   defining Unicode char U+04F4 (decimal 1268)
+   defining Unicode char U+04F5 (decimal 1269)
+   defining Unicode char U+04F8 (decimal 1272)
+   defining Unicode char U+04F9 (decimal 1273)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
+   defining Unicode char U+FB00 (decimal 64256)
+   defining Unicode char U+FB01 (decimal 64257)
+   defining Unicode char U+FB02 (decimal 64258)
+   defining Unicode char U+FB03 (decimal 64259)
+   defining Unicode char U+FB04 (decimal 64260)
+   defining Unicode char U+FB05 (decimal 64261)
+   defining Unicode char U+FB06 (decimal 64262)
+))
+Package babel Info: Making " an active character on input line 118.
+Package babel Info: Default for \cyrdash is provided on input line 161.
+)
+(/usr/share/texmf-dist/tex/generic/babel-russian/russianb.ldf
+Language: russian 2017/08/12 1.3j Russian support for the Babel system
+LaTeX Info: Redefining \cyrillictext on input line 79.
+LaTeX Info: Redefining \textcyrillic on input line 95.
+Package babel Info: Default for \cyrdash is provided on input line 157.
+))
+(/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -270,9 +552,188 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count131
-) (./index.aux
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-10-28 L3 programming layer (loader) 
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-10-28 L3 programming layer (code)
+\c_max_int=\count139
+\l_tmpa_int=\count140
+\l_tmpb_int=\count141
+\g_tmpa_int=\count142
+\g_tmpb_int=\count143
+\l__seq_internal_a_int=\count144
+\l__seq_internal_b_int=\count145
+\g__kernel_prg_map_int=\count146
+\c__ior_term_noprompt_ior=\count147
+\c_log_iow=\count148
+\l_iow_line_count_int=\count149
+\l__iow_line_target_int=\count150
+\l__iow_one_indent_int=\count151
+\l__iow_indent_int=\count152
+\c_zero_dim=\dimen152
+\c_max_dim=\dimen153
+\l_tmpa_dim=\dimen154
+\l_tmpb_dim=\dimen155
+\g_tmpa_dim=\dimen156
+\g_tmpb_dim=\dimen157
+\c_zero_skip=\skip48
+\c_max_skip=\skip49
+\l_tmpa_skip=\skip50
+\l_tmpb_skip=\skip51
+\g_tmpa_skip=\skip52
+\g_tmpb_skip=\skip53
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count153
+\l__intarray_loop_int=\count154
+\c__intarray_sp_dim=\dimen158
+\g__intarray_font_int=\count155
+\c__fp_leading_shift_int=\count156
+\c__fp_middle_shift_int=\count157
+\c__fp_trailing_shift_int=\count158
+\c__fp_big_leading_shift_int=\count159
+\c__fp_big_middle_shift_int=\count160
+\c__fp_big_trailing_shift_int=\count161
+\c__fp_Bigg_leading_shift_int=\count162
+\c__fp_Bigg_middle_shift_int=\count163
+\c__fp_Bigg_trailing_shift_int=\count164
+\c__kernel_randint_max_int=\count165
+\g__fp_array_int=\count166
+\l__fp_array_loop_int=\count167
+\l__sort_length_int=\count168
+\l__sort_min_int=\count169
+\l__sort_top_int=\count170
+\l__sort_max_int=\count171
+\l__sort_true_max_int=\count172
+\l__sort_block_int=\count173
+\l__sort_begin_int=\count174
+\l__sort_end_int=\count175
+\l__sort_A_int=\count176
+\l__sort_B_int=\count177
+\l__sort_C_int=\count178
+\l__str_internal_int=\count179
+\c__str_replacement_char_int=\count180
+\l__tl_analysis_normal_int=\count181
+\l__tl_analysis_index_int=\count182
+\l__tl_analysis_nesting_int=\count183
+\l__tl_analysis_type_int=\count184
+\l__regex_internal_a_int=\count185
+\l__regex_internal_b_int=\count186
+\l__regex_internal_c_int=\count187
+\l__regex_balance_int=\count188
+\l__regex_group_level_int=\count189
+\l__regex_mode_int=\count190
+\c__regex_cs_in_class_mode_int=\count191
+\c__regex_cs_mode_int=\count192
+\l__regex_catcodes_int=\count193
+\l__regex_default_catcodes_int=\count194
+\c__regex_catcode_D_int=\count195
+\c__regex_catcode_S_int=\count196
+\c__regex_catcode_L_int=\count197
+\c__regex_catcode_O_int=\count198
+\c__regex_catcode_A_int=\count199
+\c__regex_all_catcodes_int=\count266
+\l__regex_show_lines_int=\count267
+\l__regex_min_state_int=\count268
+\l__regex_max_state_int=\count269
+\l__regex_left_state_int=\count270
+\l__regex_right_state_int=\count271
+\l__regex_capturing_group_int=\count272
+\l__regex_min_pos_int=\count273
+\l__regex_max_pos_int=\count274
+\l__regex_curr_pos_int=\count275
+\l__regex_start_pos_int=\count276
+\l__regex_success_pos_int=\count277
+\l__regex_curr_char_int=\count278
+\l__regex_curr_catcode_int=\count279
+\l__regex_last_char_int=\count280
+\l__regex_case_changed_char_int=\count281
+\l__regex_curr_state_int=\count282
+\l__regex_step_int=\count283
+\l__regex_min_active_int=\count284
+\l__regex_max_active_int=\count285
+\l__regex_replacement_csnames_int=\count286
+\l__regex_match_count_int=\count287
+\l__regex_min_submatch_int=\count288
+\l__regex_submatch_int=\count289
+\l__regex_zeroth_submatch_int=\count290
+\g__regex_trace_regex_int=\count291
+\c_empty_box=\box57
+\l_tmpa_box=\box58
+\l_tmpb_box=\box59
+\g_tmpa_box=\box60
+\g_tmpb_box=\box61
+\l__box_top_dim=\dimen159
+\l__box_bottom_dim=\dimen160
+\l__box_left_dim=\dimen161
+\l__box_right_dim=\dimen162
+\l__box_top_new_dim=\dimen163
+\l__box_bottom_new_dim=\dimen164
+\l__box_left_new_dim=\dimen165
+\l__box_right_new_dim=\dimen166
+\l__box_internal_box=\box62
+\l__coffin_internal_box=\box63
+\l__coffin_internal_dim=\dimen167
+\l__coffin_offset_x_dim=\dimen168
+\l__coffin_offset_y_dim=\dimen169
+\l__coffin_x_dim=\dimen170
+\l__coffin_y_dim=\dimen171
+\l__coffin_x_prime_dim=\dimen172
+\l__coffin_y_prime_dim=\dimen173
+\c_empty_coffin=\box64
+\l__coffin_aligned_coffin=\box65
+\l__coffin_aligned_internal_coffin=\box66
+\l_tmpa_coffin=\box67
+\l_tmpb_coffin=\box68
+\g_tmpa_coffin=\box69
+\g_tmpb_coffin=\box70
+\l__coffin_bounding_shift_dim=\dimen174
+\l__coffin_left_corner_dim=\dimen175
+\l__coffin_right_corner_dim=\dimen176
+\l__coffin_bottom_corner_dim=\dimen177
+\l__coffin_top_corner_dim=\dimen178
+\l__coffin_scaled_total_height_dim=\dimen179
+\l__coffin_scaled_width_dim=\dimen180
+\c__coffin_empty_coffin=\box71
+\l__coffin_display_coffin=\box72
+\l__coffin_display_coord_coffin=\box73
+\l__coffin_display_pole_coffin=\box74
+\l__coffin_display_offset_dim=\dimen181
+\l__coffin_display_x_dim=\dimen182
+\l__coffin_display_y_dim=\dimen183
+\g__char_data_ior=\read1
+
+(/usr/share/texmf-dist/tex/latex/l3kernel/l3deprecation.def
+File: l3deprecation.def 2019-04-06 v L3 Deprecated functions
+))
+(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2019-04-06 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count292
+\l__pdf_internal_box=\box75
+))
+(/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2019-10-11 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count293
+\g__xparse_grabber_int=\count294
+\l__xparse_m_args_int=\count295
+\l__xparse_v_nesting_int=\count296
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+)) (./index.aux
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 4
+.
+
+(/usr/share/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 
 LaTeX Warning: Label `pic:diagram' multiply defined.
 
@@ -282,70 +743,98 @@ LaTeX Warning: Label `pic:diagram' multiply defined.
 )
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.70166pt, 418.25368pt, 107.55254pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=-0.56833pt
+* \evensidemargin=35.28255pt
+* \topmargin=-9.86334pt
+* \headheight=14.0pt
+* \headsep=25.0pt
+* \topskip=14.0pt
+* \footskip=30.0pt
+* \marginparwidth=61.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen143
-\scratchbox=\box56
-\nofMPsegments=\count133
-\nofMParguments=\count134
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen144
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks25
-) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+\scratchcounter=\count297
+\scratchdimen=\dimen184
+\scratchbox=\box76
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen185
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks28
+) (/usr/share/texmf-dist/tex/latex/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texmf-dist/tex/latex/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texmf-dist/tex/latex/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texmf-dist/tex/latex/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texmf-dist/tex/latex/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texmf-dist/tex/latex/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texmf-dist/tex/latex/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texmf-dist/tex/latex/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texmf-dist/tex/latex/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+))))
+(/usr/share/texmf-dist/tex/latex/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -377,258 +866,352 @@ Package caption Warning: Forced redefinition of \caption since the
 See the caption package documentation for explanation.
 
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Overfull \hbox (3.14873pt too wide) in paragraph at lines 49--52
+[]\T2A/cmr/m/n/12 Distributed databases being evolved require write requests
+ []
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.02237pt too wide) in alignment at lines 60--72
-[][][]
+Overfull \hbox (23.79637pt too wide) in paragraph at lines 52--53
+[]\T2A/cmr/bx/n/12 Key Terms: \T2A/cmr/m/n/12 distributed datastores, CAP-theor
+em, availability, consistency,
+ []
+
+
+Overfull \hbox (2.7166pt too wide) in paragraph at lines 60--62
+[]\T2A/cmr/m/n/14.4 So let's concentrate on efficient consistency model - BASE 
+(Basically
+ []
+
+
+Overfull \hbox (0.21634pt too wide) in paragraph at lines 60--62
+\T2A/cmr/m/n/14.4 Available, Soft State, Eventual Consistency) (see [[]]). Main
+ly this paper
+ []
+
+
+Overfull \hbox (22.08517pt too wide) in paragraph at lines 60--62
+\T2A/cmr/m/n/14.4 is devoted to eventual consistency. Let us remind what eventu
+al consistency
+ []
+
+
+Overfull \hbox (38.75122pt too wide) in paragraph at lines 63--66
+\T2A/cmr/m/n/14.4 value. For that instead of binary metric for eventual consist
+ency/inconsistency
  []
 
 [2]
-Overfull \hbox (24.26591pt too wide) in paragraph at lines 91--93
-[]\OT1/cmr/m/n/10 As marked above, we in-tro-duce the stochas-tic met-rics for 
-in-con-sis-tency/consistency
+Overfull \hbox (3.29399pt too wide) in paragraph at lines 69--71
+[]\T2A/cmr/m/n/14.4 In the section 2[] we develop consistency model defined in 
+the previous
  []
 
-[3] [4]
-<images/1-consistent-partition.png, id=28, 462.528pt x 346.896pt>
+
+Overfull \hbox (1.93152pt too wide) in paragraph at lines 69--71
+\T2A/cmr/m/n/14.4 paper [[]] and define the inconsistency metric for a distribu
+ted datastore.
+ []
+
+
+Overfull \hbox (15.3378pt too wide) in paragraph at lines 69--71
+\T2A/cmr/m/n/14.4 In section 3[] section we approximate the time that is needed
+ for consistency
+ []
+
+
+Overfull \hbox (17.76236pt too wide) in paragraph at lines 78--81
+\T2A/cmr/m/n/14.4 elements of CAP-theorem. Now our paper is mainly devoted to c
+onsistency
+ []
+
+
+Overfull \hbox (2.12521pt too wide) in paragraph at lines 78--81
+\T2A/cmr/m/n/14.4 the developed mathematical model and expand it with elements,
+ needed
+ []
+
+
+Overfull \hbox (8.81244pt too wide) in alignment at lines 83--95
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Overfull \hbox (4.98755pt too wide) in paragraph at lines 99--100
+\T2A/cmr/m/n/14.4 Section 4[]), and afterwards will focus on time which distrib
+uted datastore
+ []
+
+
+Overfull \hbox (1.81589pt too wide) in paragraph at lines 101--102
+[]\T2A/cmr/m/n/14.4 For this metric we created the probabilistic event taking t
+wo random
+ []
+
+
+Overfull \hbox (13.60112pt too wide) in paragraph at lines 101--102
+\T2A/cmr/m/n/14.4 Carrying out this event many times, we can obtain the average
+ probability
+ []
+
+
+Overfull \hbox (9.74019pt too wide) in paragraph at lines 110--112
+[]\T2A/cmr/m/n/14.4 Also let's claim that $\OML/cmm/m/it/14.4 p$ \T2A/cmr/m/n/1
+4.4 is the probability that two nodes are consistent,
+ []
+
+
+Overfull \hbox (91.16997pt too wide) in paragraph at lines 114--116
+[]\T2A/cmr/m/n/14.4 As marked above, we introduce the stochastic metrics for in
+consistency/consistency
+ []
+
+[4]
+Overfull \hbox (5.34064pt too wide) in paragraph at lines 121--124
+\T2A/cmr/m/n/14.4 where $\OML/cmm/m/it/14.4 n[]$ \T2A/cmr/m/n/14.4 is length of
+ consistent subset in the system at time $\OML/cmm/m/it/14.4 t$\T2A/cmr/m/n/14.
+4 . Obviously,
+ []
+
+
+Overfull \hbox (6.72694pt too wide) in paragraph at lines 152--154
+[]\T2A/cmr/m/n/14.4 Taking into account this consideration we define inconsiste
+ncy metric
+ []
+
+[5]
+Overfull \hbox (1.28209pt too wide) in paragraph at lines 185--189
+[]\T2A/cmr/m/n/14.4 Let us denote as $\OML/cmm/m/it/14.4 T[]$ \T2A/cmr/m/n/14.4
+ time for consistency convergence
+ []
+
+[6]
+Overfull \hbox (39.0332pt too wide) in paragraph at lines 211--213
+\T2A/cmr/m/n/14.4 The study in the Section 2[] had been checked by the followin
+g experimentation:
+ []
+
+
+Overfull \hbox (20.21904pt too wide) in paragraph at lines 211--213
+\T2A/cmr/m/n/14.4 we implemented a code that allows to test the accuracy of the
+ inconsistency
+ []
+
+[7]
+<images/1-consistent-partition.png, id=39, 462.528pt x 346.896pt>
 File: images/1-consistent-partition.png Graphic file (type png)
 <use images/1-consistent-partition.png>
 Package pdftex.def Info: images/1-consistent-partition.png  used on input line 
-195. on input line 195.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 195.
-
-Overfull \hbox (11.44614pt too wide) in paragraph at lines 195--196
- [][] 
- []
-
-<images/1-1-1-1-1-consistent-partitions-probability.png, id=30, 462.528pt x 346
+218.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+<images/1-1-1-1-1-consistent-partitions-probability.png, id=41, 462.528pt x 346
 .896pt>
 File: images/1-1-1-1-1-consistent-partitions-probability.png Graphic file (type
  png)
 <use images/1-1-1-1-1-consistent-partitions-probability.png>
 Package pdftex.def Info: images/1-1-1-1-1-consistent-partitions-probability.png
-  used on input line 198. on input line 198.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 198.
+  used on input line 221.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \hbox (11.44614pt too wide) in paragraph at lines 198--199
- [][] 
- []
-
-
-Overfull \hbox (2.05554pt too wide) in paragraph at lines 194--200
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 217--223
 []$[]$ $[]$ 
  []
 
-<images/2-3-consistent-partitions-probability.png, id=31, 462.528pt x 346.896pt
+<images/2-3-consistent-partitions-probability.png, id=42, 462.528pt x 346.896pt
 >
 File: images/2-3-consistent-partitions-probability.png Graphic file (type png)
 <use images/2-3-consistent-partitions-probability.png>
 Package pdftex.def Info: images/2-3-consistent-partitions-probability.png  used
- on input line 207. on input line 207.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 207.
-
-Overfull \hbox (11.44614pt too wide) in paragraph at lines 207--208
- [][] 
- []
-
-<images/1-4-consistent-partitions-probability.png, id=32, 462.528pt x 346.896pt
+ on input line 230.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+<images/1-4-consistent-partitions-probability.png, id=43, 462.528pt x 346.896pt
 >
 File: images/1-4-consistent-partitions-probability.png Graphic file (type png)
 <use images/1-4-consistent-partitions-probability.png>
 Package pdftex.def Info: images/1-4-consistent-partitions-probability.png  used
- on input line 210. on input line 210.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 210.
+ on input line 233.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \hbox (11.44614pt too wide) in paragraph at lines 210--211
- [][] 
- []
-
-
-Overfull \hbox (2.05554pt too wide) in paragraph at lines 206--212
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 229--235
 []$[]$ $[]$ 
  []
 
-<images/1-1-3-consistent-partitions-probability.png, id=33, 462.528pt x 346.896
+<images/1-1-3-consistent-partitions-probability.png, id=44, 462.528pt x 346.896
 pt>
 File: images/1-1-3-consistent-partitions-probability.png Graphic file (type png
 )
 <use images/1-1-3-consistent-partitions-probability.png>
 Package pdftex.def Info: images/1-1-3-consistent-partitions-probability.png  us
-ed on input line 236. on input line 236.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 236.
-
-Overfull \hbox (11.44614pt too wide) in paragraph at lines 236--237
- [][] 
- []
-
-<images/1-2-2-consistent-partitions-probability.png, id=34, 462.528pt x 346.896
+ed on input line 259.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+<images/1-2-2-consistent-partitions-probability.png, id=45, 462.528pt x 346.896
 pt>
 File: images/1-2-2-consistent-partitions-probability.png Graphic file (type png
 )
 <use images/1-2-2-consistent-partitions-probability.png>
 Package pdftex.def Info: images/1-2-2-consistent-partitions-probability.png  us
-ed on input line 239. on input line 239.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 239.
+ed on input line 262.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 
-Overfull \hbox (11.44614pt too wide) in paragraph at lines 239--240
- [][] 
- []
-
-
-Overfull \hbox (2.05554pt too wide) in paragraph at lines 235--241
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 258--264
 []$[]$ $[]$ 
  []
 
-<images/1-1-1-2-consistent-partitions-probability.png, id=35, 462.528pt x 346.8
+<images/1-1-1-2-consistent-partitions-probability.png, id=46, 462.528pt x 346.8
 96pt>
 File: images/1-1-1-2-consistent-partitions-probability.png Graphic file (type p
 ng)
 <use images/1-1-1-2-consistent-partitions-probability.png>
 Package pdftex.def Info: images/1-1-1-2-consistent-partitions-probability.png  
-used on input line 250. on input line 250.
-Package pdftex.def Info: Requested size: 185.0079pt x 138.75594pt on input line
- 250.
-
-LaTeX Warning: Reference `pic:100' on page 5 undefined on input line 257.
-
-
-LaTeX Warning: Reference `pic:200' on page 5 undefined on input line 257.
-
-
-LaTeX Warning: Reference `pic:1000' on page 5 undefined on input line 257.
-
-[5] [6 <./images/1-consistent-partition.png> <./images/1-1-1-1-1-consistent-par
+used on input line 273.
+(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
+[8] [9 <./images/1-consistent-partition.png> <./images/1-1-1-1-1-consistent-par
 titions-probability.png> <./images/2-3-consistent-partitions-probability.png> <
 ./images/1-4-consistent-partitions-probability.png> <./images/1-1-3-consistent-
 partitions-probability.png> <./images/1-2-2-consistent-partitions-probability.p
 ng>]
-<images/100-consistency-convergence.png, id=48, 462.528pt x 346.896pt>
+<images/100-consistency-convergence.png, id=59, 462.528pt x 346.896pt>
 File: images/100-consistency-convergence.png Graphic file (type png)
 <use images/100-consistency-convergence.png>
 Package pdftex.def Info: images/100-consistency-convergence.png  used on input 
-line 264. on input line 264.
-Package pdftex.def Info: Requested size: 104.1381pt x 78.10115pt on input line 
-264.
-<images/200-consistency-convergence.png, id=49, 462.528pt x 346.896pt>
+line 287.
+(pdftex.def)             Requested size: 125.47737pt x 94.10779pt.
+<images/200-consistency-convergence.png, id=60, 462.528pt x 346.896pt>
 File: images/200-consistency-convergence.png Graphic file (type png)
 <use images/200-consistency-convergence.png>
 Package pdftex.def Info: images/200-consistency-convergence.png  used on input 
-line 268. on input line 268.
-Package pdftex.def Info: Requested size: 104.1381pt x 78.10115pt on input line 
-268.
-<images/1000-consistency-convergence.png, id=50, 462.528pt x 346.896pt>
+line 291.
+(pdftex.def)             Requested size: 125.47737pt x 94.10779pt.
+<images/1000-consistency-convergence.png, id=61, 462.528pt x 346.896pt>
 File: images/1000-consistency-convergence.png Graphic file (type png)
 <use images/1000-consistency-convergence.png>
 Package pdftex.def Info: images/1000-consistency-convergence.png  used on input
- line 272. on input line 272.
-Package pdftex.def Info: Requested size: 104.1381pt x 78.10115pt on input line 
-272.
-<images/100-consistency-convergence-weighted.png, id=51, 462.528pt x 346.896pt>
+ line 295.
+(pdftex.def)             Requested size: 125.47737pt x 94.10779pt.
+<images/100-consistency-convergence-weighted.png, id=62, 462.528pt x 346.896pt>
 
 File: images/100-consistency-convergence-weighted.png Graphic file (type png)
 <use images/100-consistency-convergence-weighted.png>
 Package pdftex.def Info: images/100-consistency-convergence-weighted.png  used 
-on input line 288. on input line 288.
-Package pdftex.def Info: Requested size: 104.1381pt x 78.10115pt on input line 
-288.
-<images/200-consistency-convergence-weighted.png, id=52, 462.528pt x 346.896pt>
+on input line 311.
+(pdftex.def)             Requested size: 125.47737pt x 94.10779pt.
+<images/200-consistency-convergence-weighted.png, id=63, 462.528pt x 346.896pt>
 
 File: images/200-consistency-convergence-weighted.png Graphic file (type png)
 <use images/200-consistency-convergence-weighted.png>
 Package pdftex.def Info: images/200-consistency-convergence-weighted.png  used 
-on input line 292. on input line 292.
-Package pdftex.def Info: Requested size: 104.1381pt x 78.10115pt on input line 
-292.
-<images/1000-consistency-convergence-weighted.png, id=53, 462.528pt x 346.896pt
+on input line 315.
+(pdftex.def)             Requested size: 125.47737pt x 94.10779pt.
+<images/1000-consistency-convergence-weighted.png, id=64, 462.528pt x 346.896pt
 >
 File: images/1000-consistency-convergence-weighted.png Graphic file (type png)
 <use images/1000-consistency-convergence-weighted.png>
 Package pdftex.def Info: images/1000-consistency-convergence-weighted.png  used
- on input line 296. on input line 296.
-Package pdftex.def Info: Requested size: 104.1381pt x 78.10115pt on input line 
-296.
-<images/dds-class-diagram.png, id=54, 883.3pt x 531.9875pt>
+ on input line 319.
+(pdftex.def)             Requested size: 125.47737pt x 94.10779pt.
+<images/dds-class-diagram.png, id=65, 883.3pt x 531.9875pt>
 File: images/dds-class-diagram.png Graphic file (type png)
 <use images/dds-class-diagram.png>
-Package pdftex.def Info: images/dds-class-diagram.png  used on input line 305. 
-on input line 305.
-Package pdftex.def Info: Requested size: 353.31374pt x 212.79123pt on input lin
-e 305.
-
-Overfull \hbox (6.1902pt too wide) in paragraph at lines 305--306
- [][] 
- []
-
-<images/message-broadcasting-state-machine.png, id=55, 863.225pt x 642.4pt>
+Package pdftex.def Info: images/dds-class-diagram.png  used on input line 328.
+(pdftex.def)             Requested size: 353.31374pt x 212.79123pt.
+<images/message-broadcasting-state-machine.png, id=66, 863.225pt x 642.4pt>
 File: images/message-broadcasting-state-machine.png Graphic file (type png)
 <use images/message-broadcasting-state-machine.png>
 Package pdftex.def Info: images/message-broadcasting-state-machine.png  used on
- input line 312. on input line 312.
-Package pdftex.def Info: Requested size: 345.28389pt x 256.95544pt on input lin
-e 312.
-[7 <./images/1-1-1-2-consistent-partitions-probability.png>] [8 <./images/100-c
-onsistency-convergence.png> <./images/200-consistency-convergence.png> <./image
-s/1000-consistency-convergence.png> <./images/100-consistency-convergence-weigh
-ted.png> <./images/200-consistency-convergence-weighted.png> <./images/1000-con
-sistency-convergence-weighted.png> <./images/dds-class-diagram.png (PNG copy)>]
-[9 <./images/message-broadcasting-state-machine.png (PNG copy)>]
-Underfull \hbox (badness 1297) in paragraph at lines 356--359
-[]\OT1/cmr/m/n/9 Charles Roe: ACID vs. BASE: The Shift-ing pH of Database Trans
--ac-tion
+ input line 335.
+(pdftex.def)             Requested size: 345.28389pt x 256.95544pt.
+
+Overfull \hbox (0.75557pt too wide) in paragraph at lines 326--342
+\T2A/cmr/m/n/14.4 correct choice. Because for regular graph if the path to anot
+her neighbor
+ []
+
+[10 <./images/1-1-1-2-consistent-partitions-probability.png>] [11] [12 <./image
+s/100-consistency-convergence.png> <./images/200-consistency-convergence.png> <
+./images/1000-consistency-convergence.png> <./images/100-consistency-convergenc
+e-weighted.png> <./images/200-consistency-convergence-weighted.png> <./images/1
+000-consistency-convergence-weighted.png> <./images/dds-class-diagram.png (PNG 
+copy)>]
+Overfull \hbox (5.54329pt too wide) in paragraph at lines 351--352
+\T2A/cmr/m/n/14.4 of the graph representing network topology of a distributed d
+atastore; 
+ []
+
+[13 <./images/message-broadcasting-state-machine.png (PNG copy)>]
+Overfull \hbox (19.98076pt too wide) in paragraph at lines 357--358
+\T2A/cmr/m/n/14.4 Above we described that we considered a lot of useful things 
+for consistency
+ []
+
+[14]
+Underfull \hbox (badness 3068) in paragraph at lines 375--378
+[]\T2A/cmr/m/n/12 Kyrylo Rukkas, Galyna Zholtkevych: Distributed Datastores: To
+wards
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 356--359
-\OT1/cmr/m/n/9 Pro-cess-ing http://www.dataversity.net/acid-vs-base-the-shiftin
-g-ph-of-database-
+Underfull \hbox (badness 10000) in paragraph at lines 380--383
+\T2A/cmr/m/n/12 Processing http://www.dataversity.net/acid-vs-base-the-shifting
+-ph-of-
  []
 
-[10] [11] (./index.aux)
 
-LaTeX Warning: There were undefined references.
+Underfull \hbox (badness 1502) in paragraph at lines 385--388
+[]\T2A/cmr/m/n/12 Tanenbaum, A.S., Van Steen, M.: Distributed systems. Principl
+es and
+ []
 
+
+Overfull \hbox (14.34727pt too wide) in paragraph at lines 396--399
+[]\T2A/cmr/m/n/12 G.Zholtkevych: DDS Simulation project, https://github.com/gzh
+oltkevych/DDS-
+ []
+
+[15] (./index.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4298 strings out of 492985
- 63034 string characters out of 6138637
- 230340 words of memory out of 5000000
- 7783 multiletter control sequences out of 15000+600000
- 10780 words of font info for 42 fonts, out of 8000000 for 9000
+ 16581 strings out of 492167
+ 295922 string characters out of 6131557
+ 517501 words of memory out of 5000000
+ 20786 multiletter control sequences out of 15000+600000
+ 546955 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,40p,524b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on index.pdf (11 pages, 412225 bytes).
+ 46i,10n,67p,630b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts
+/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf-dist/fonts/type1/public/c
+m-super/sfbx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx172
+8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist/f
+onts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/cm-super/sfti1440.pfb>
+Output written on index.pdf (15 pages, 463502 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

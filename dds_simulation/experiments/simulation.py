@@ -54,6 +54,8 @@ class DDSMessaging(DDS):
             self.links.add(Link(node1, node2))
             if weighted:
                 graph[node1][node2]['weight'] = random.randint(1, 9)
+            else:
+                graph[node1][node2]['weight'] = 1
 
         for node_ident in graph.nodes():
             neighbors = graph.neighbors(node_ident)

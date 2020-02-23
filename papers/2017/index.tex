@@ -2,13 +2,19 @@
 % * <galynazholtkevych1991@gmail.com> 2017-11-19T14:02:18.924Z:
 %
 % ^.
-\documentclass{llncs}
+
+\documentclass[a4paper,14pt]{llncs}
 %
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{extsizes}
+\usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[english,ukrainian,russian]{babel}
+
 \captionsetup{compatibility=false}
 \usepackage{url}
 \usepackage[usenames]{color}
@@ -18,16 +24,32 @@
 \newcommand{\keyterms}[1]{\par{\bfseries{ Key Terms: }}#1}
 
 \begin{document}
+\title{Розподілені сховища даних: Метріки узгодженості для розподілених сховищ}
+\author{Кирило Рукас\and Галина Жолткевич}
+\title{Распределенные хранилища данных: Метрики согласованности для распределенных хранилищ}
+\author{Кирилл Руккас\and Галина Жолткевич}
 \title{Distributed Datastores: Consistency Metric for Distributed Datastores}
 \author{Kyrylo Rukkas\and Galyna Zholtkevych}
-\institute{V.N.~Karazin Kharkiv National University\\
-	4, Svobody Sqr., 61022, Kharkiv, Ukraine\\
-	\email{galynazholtkevych1991@gmail.com}}
 \maketitle
+\begin{abstract}
+Розвиток розподілених сховищ вимагає незалежної обробки запитів на запис та читання для підвищення значення "доступності" як числової величини - одного з основних гарантій для надійного сховища.
+Це означає, що деяка кількість вузлів у розподіленій базі даних може виконувати операції на зміну даних, що веде до численних конфліктів і розбіжностей в узгодженості, і згодом до повної неузгодженості і безладу між репліками на різних вузлах системи. В даній статті пропонується формулювання стохастичної метріки для 
+узгодженості в розподіленому сховищі. Також в статті роздивляється критерії для збіжності узгодженості та робляться заключення для алгоритму  прийняття рішень.
+\keyterms розподілені сховища, CAP-теорема, доступність, узгодженість, стохастична модель, критерії для збіжності узгодженості
+\end{abstract}
+\begin{abstract}
+Развитие распределенных хранилищ требует независимой обработки запросов на запись и чтение для повышения значния "доступности" як численной величины - 
+одной из основных гарантий надежного распределенного хранилища. Это значит, что некоторое количество узлов в распределенной базе данных может выполнять
+операции модификации данных, что приведет к множеству конфликтов, и в конце концов к полной несогласованности данных между репликами на разных узлах системы.
+В данной статье предлагается формулировка стохастической метрики для согласованности в распределенном хранилище. Также в статье рассматриваются критерии для сходимости согласованности и делаются выводы для поведенческого алгоритмы принятия решений.
+\keyterms распределенные хранилища, CAP-теорема, доступность, согласованность, стохастическая модель, критерии для сходимости согласованности
+
+\end{abstract}
 \begin{abstract}
 Distributed databases being evolved require write requests to be handled independently to increase availability.
 This means that some number of nodes in a database can process modifying operation. This involves huge conflicts and leads to full inconsistency and mess between replicas. This paper takes attention on the consistency and proposing to replace binary metric by stochastic metric. Also, paper is devoted to 
 consistency convergence investigation and propose some inferences for the algorithm of decision-making behaviour.
+\keyterms distributed datastores, CAP-theorem, availability, consistency, stochastic model
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
@@ -51,6 +73,7 @@ In section \ref{sec:experiments} we conduct experiments that prove the correctne
 In section \ref{sec:simulation} we provide diagrams of the implemented application that we use for carrying out experiments.
 
 \section{Evolving consistency metric mathematical model: Derived metrics}\label{sec:model}
+
 
 In the previous paper (see \cite{bib:prob_approach}) we considered the metrics for all three elements of CAP-theorem.
 Now our paper is mainly devoted to consistency question and how fast it can converge.
@@ -150,13 +173,13 @@ The meaning of $I(d)$ is the value of probability to establish the fact of incon
 Example~\ref{ex:metric} demonstrates that the proposed metric is equal to $0$ for the absolutely consistent data unit (the case 5) and is equal to $1$ for the absolutely inconsistent data unit (the case 1+1+1+1+1) in the subset $N_d$.
 
 
-\section{Convergence time complexity}\label{sec:complexity}
+\section{Convergence time complexity. Necessary Condition}\label{sec:complexity}
 
 Now we are interested to calculate the time that can be taken for consistency convergence.
 We want to prove the following:
 \begin{proposition}\label{prop}
 Let we have a distributed datastore where all links are available and reliable (network partitions do not happen in a datastore and nodes are stable and respond in approximately equal time); the interval between writing operations is $t_w$.
-Then $t_w$ is less than the diameter of network graph ensures eventual consistency of the datastore.
+If and only if such input conditions are met, then $t_w$ is less than the diameter of network graph ensures eventual consistency of the datastore.
 \end{proposition}
 \begin{proof}
 Let us denote as $T_c$ time for consistency convergence (time that is needed for the whole system to become consistent).
@@ -262,15 +285,15 @@ points that are showing that $T_c < D(G)$.
 \begin{figure}[p]\label{pic:diagram}
 \begin{subfigure}{0.3\linewidth}
 \centering\includegraphics[width=\linewidth]{images/100-consistency-convergence.png}
-\caption{100 experiments}\label{100}
+\caption{100 experiments}\label{pic:100}
 \end{subfigure}
 \begin{subfigure}{0.3\linewidth}
 \centering\includegraphics[width=\linewidth]{images/200-consistency-convergence.png}
-\caption{200 experiments}\label{200}
+\caption{200 experiments}\label{pic:200}
 \end{subfigure}
 \begin{subfigure}{0.3\linewidth}
 \centering\includegraphics[width=\linewidth]{images/1000-consistency-convergence.png}
-\caption{1000 experiments}\label{1000}
+\caption{1000 experiments}\label{pic:1000}
 \end{subfigure}
 \caption{Graphics for consistency convergence time}
 \end{figure}
@@ -321,7 +344,7 @@ In this paper we have studied the consistency property for distributed datastore
 So thinking how huge distributed datastores could be and having small interval between write operations to a datastore, we can conclude that binary variable loses its utility.
 It might be needed to evaluate current inconsistency state of a datastore, to get nodes that are consistent and make a decision based on obtained results.
 
-Therefore we have proposed stochastic metric instead of binary one considering consistent partitions of a distributed datastore, formed metric for the inconsistency and shown the correctness of the formulae by carrying out experiments, shown when distributed datastore is fully inconsistent and fully consistent, evaluated the upper boundary of time that is taken for consistency convergence in a distributed datastore, taking into account that datastore is reliable, stable and does not have network partitions.
+Therefore we have proposed stochastic metric instead of binary one considering consistent partitions of a distributed datastore, formed metric for the inconsistency and shown the correctness of the formulae by carrying out experiments, shown when distributed datastore is fully inconsistent and fully consistent, evaluated the upper boundary of time that is taken for consistency convergence in a distributed datastore, taking into account that datastore is reliable, stable, does not have network partitions and data are distributed without dataloss. Hence, we formed the necessary condition for eventual consistency.
 
 Thus, based on the research of current paper we can make following recommendations for those who build the network topology of the distributed datastore:
 \begin{itemize}
@@ -336,6 +359,7 @@ Above we described that we considered a lot of useful things for consistency in 
 \item carry out experiments for inconsistency metric in the worst case;
 \item complicate a datastore introducing different availability for each node;
 \item complicate a datastore introducing various network partitions for a datastore;
+\item complicate a datastore introducing dataloss probabilities for every link and node;
 \item provide an algorithm that will allow to make a decision what is the best approach for a given datastore such that the eventually consistency is satisfied or an approach when inconsistency will not impact on datastore requirements;
 \item theory for finding the most actual replica and time complexity for this algorithm
 \item consider all the proposed above metrics in various kinds of real topologies.
