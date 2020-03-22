@@ -111,10 +111,12 @@ class DatalossProbability:
                 yield j_delivery
 
         t_deliveries = list(_path_delivery(paths))
-        p_deliveries = list(map(lambda x: x / p_delivery_at_least_one, p_deliveries))
+        p_deliveries = list(map(lambda x: 1 - (x / p_delivery_at_least_one), p_deliveries))
         # this probability is decreasing so the time of delivery should raise. but it also decreases, hence the formula is not correct
-        delivery = sum(x * y for x, y in zip(p_deliveries, t_deliveries))
-        return delivery
+        mean_delivery = sum(x * y for x, y in zip(p_deliveries, t_deliveries))
+        max_probability = p_deliveries.index(max(p_deliveries))
+        preferable_delivery = t_deliveries[max_probability]
+        return mean_delivery, preferable_delivery
 
     def __call__(self):
         """Build the matrix with probabilities of delivery from i to j through at least one path"""
@@ -128,7 +130,7 @@ class DatalossProbability:
                 # calculate the delivery probability for AT LEAST ONE of paths from i to j
                 # it is (1 - dataloss probability for ALL of simple paths from i to j)
                 p_deliveries_one_of = list(self._path_delivery_probability(paths))
-                p_dataloss = map(lambda x: 1 - x, p_deliveries_one_of)
+                p_dataloss = list(map(lambda x: 1 - x, p_deliveries_one_of))
                 p_delivery_at_least_one = 1 - reduce(mul, p_dataloss)
                 if p_delivery_at_least_one == 0:
                     self.final_graph[i][j]['probability'] = self.final_graph[i][j]['probability'] = 0
@@ -140,20 +142,23 @@ class DatalossProbability:
                 # )
 
                 if self.calculate_delivery:
-                    d = self._calculate_mean_delivery(paths, p_deliveries_one_of, p_delivery_at_least_one)
-                    self.final_graph[i][j]['delivery'] = self.final_graph[i][j]['delivery'] = d
+                    mean_delivery, preferrable_delivery = self._calculate_mean_delivery(
+                        paths, p_deliveries_one_of, p_delivery_at_least_one)
+                    self.final_graph[i][j]['delivery'] = self.final_graph[i][j]['delivery'] = mean_delivery
+                    self.final_graph[i][j]['preferrable_delivery'] = self.final_graph[i][j]['preferrable_delivery'] = preferrable_delivery
 
     def represent_delivery(self):
         print("MEAN DELIVERY")
         print_matrix(nx.to_numpy_matrix(self.final_graph, weight='delivery'))
-        # for i, j in self.final_graph.edges_iter():
-        #     print(self.final_graph[i][j]['delivery'], " \t")
+        print("PREFERRABLE DELIVERY")
+        print_matrix(nx.to_numpy_matrix(self.final_graph, weight='preferrable_delivery'))
 
     def calculate_mean_delivery(self):
         delivery = 0
         for _, _, edge in self.final_graph.edges_iter(data=True):
             delivery += edge['delivery']
         mean_delivery = delivery / self.final_graph.number_of_edges()
+        print("AVERAGE--> ", mean_delivery)
         return mean_delivery
 
     @property
@@ -184,7 +189,7 @@ class MetricsMeasurer:
         """
         mean_delivery = self._find_delivery()
         if mean_delivery > self.mean_delivery_threshold:
-            raise Exception("Your initial delivery probabilities for edges do not satisfy your set threshold")
+            print("Warning: Your initial delivery probabilities for edges do not satisfy your set threshold")
 
     def _find_delivery(self):
         delivery_metric = DatalossProbability(self.graph,
@@ -219,6 +224,7 @@ class MetricsMeasurer:
             threshold_fault_tolerance, mean_delivery = self._find_mean_fault_tolerance(
                 alive_probability, decrease_alive_probability_step, mean_delivery, node)
             alive_probabilities[node] = (threshold_fault_tolerance, degree)
+        threshold_fault_tolerance, mean_delivery = self._find_mean_fault_tolerance()
 
         return alive_probabilities
 
@@ -249,7 +255,7 @@ def _add_probability_metric_to_graph_node(graph, node, metric_name, value):
 
 def print_matrix(matrix):
     for row in matrix:
-        print(f'{row}\t')
+        print(f'| {row}\t | ')
 
 
 if __name__ == '__main__':
@@ -263,7 +269,7 @@ if __name__ == '__main__':
     G.add_edge(2, 5)
     G.add_edge(2, 1)
     d = G.degree()
-    MEAN_DELIVERY_THRESHOLD = 3  # chosen by network administrator. calculated using QoS
+    MEAN_DELIVERY_THRESHOLD = 5  # chosen by network administrator. calculated using QoS
     # G = nx.random_regular_graph(3, 10)
 
     _add_probability_metric_to_graph_edges(G, 'probability')
@@ -278,9 +284,13 @@ if __name__ == '__main__':
     print("INITIAL delivery between neighbors")
     print_matrix(delivery_adj_matrix)
 
-    # metrics = MetricsMeasurer(G, MEAN_DELIVERY_THRESHOLD)
-    # metrics.find_initial_thresholds()
-    # metrics.graph = G
+    metrics = MetricsMeasurer(G, MEAN_DELIVERY_THRESHOLD)
+    metrics.find_initial_thresholds()
+    metrics.graph = G
+
+    _add_probability_metric_to_graph_nodes(G, 'alive_probability')
+    metrics = MetricsMeasurer(G, MEAN_DELIVERY_THRESHOLD)
+    metrics.find_initial_thresholds()
     # recommended_alive_probabilities = metrics.find_fault_tolerance_threshold()
     # print("Minimum alive probabilities for each of node:")
 

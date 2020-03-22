@@ -1,0 +1,23 @@
+@startuml
+
+start
+:calculate mean time on graph G using program T;
+
+if (set A not empty?  ) then (yes)
+  :execute A algorithms  ;
+  :execute T ;
+endif
+
+:n_i = nodes sorted by
+frequency of read requests   ;
+repeat
+:allocate each node that is not allocated yet
+from n_i to position that have minimal delivery time       ;
+:remove used position from n_i   ;
+repeat while (n_i is not empty  ) is (yes)
+->no;
+
+
+stop
+
+@enduml
